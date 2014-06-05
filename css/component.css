@@ -18,12 +18,10 @@ body
 .st-content,
 .st-content-inner {
 	position: relative;
-	overflow: scroll;
 }
 
 .st-container {
 	position: relative;
-	overflow: scroll;
 }
 
 .st-pusher {
@@ -59,7 +57,7 @@ body
 	left: 0;
 	z-index: 100;
 	visibility: hidden;
-	width: 300px;
+	width: 200px;
 	background: #48a770;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
@@ -99,7 +97,7 @@ body
 	color: rgba(0,0,0,0.4);
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 	font-weight: 300;
-	font-size: 2em;
+	font-size: 1em;
 }
 
 .st-menu ul li a {
@@ -123,14 +121,14 @@ body
 .st-menu ul li a:hover {
 	background: rgba(0,0,0,0.2);
 	box-shadow: inset 0 -1px rgba(0,0,0,0);
-	color: #fff;
+	color: #ffffff;
 }
 
 /* Individual effects */
 
 /* Effect 4: Slide along */
 .st-effect-4.st-menu-open .st-pusher {
-	-webkit-transform: translate3d(300px, 0, 0);
+	-webkit-transform: translate3d(200px, 0, 0);
 	transform: translate3d(300px, 0, 0);
 }
 
