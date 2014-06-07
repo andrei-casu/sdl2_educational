@@ -55,6 +55,17 @@
 				document.addEventListener( eventtype, bodyClickFn );
 			});
 		} );
+		$(".b_meniu").click(function(){
+			var nume=$(this).attr("id");
+			nume=nume.replace("b", "s");
+			if (nume==$(".active").attr("id")) return;
+
+			$(".article").slideUp(500);
+			$(".active").removeClass("active");
+			$("#"+nume).addClass("active");
+			$(".active").slideDown(500);
+			resetMenu();
+		})
 
 	}
 

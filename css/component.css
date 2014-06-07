@@ -3,16 +3,16 @@ body,
 .st-container,
 .st-content {
 	height: 100%;
+	font-family: Calibri;
 }
 
 body
 {
-	background: #000000;
+	background: #1E4352;
 	color: #ffffff;
 }
 
 .st-content {
-	background: #000000
 }
 
 .st-content,
@@ -55,13 +55,15 @@ body
 }
 
 .st-menu {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
 	visibility: hidden;
 	width: 200px;
-	background: #48a770;
+	height: 100%;
+	overflow: scroll;
+	background: #333333;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
@@ -97,10 +99,9 @@ body
 .st-menu h2 {
 	margin: 0;
 	padding: 0.5em;
-	color: rgba(0,0,0,0.4);
-	text-shadow: 0 0 1px rgba(0,0,0,0.1);
+	color: rgba(255,255,255,0.8);
 	font-weight: 300;
-	font-size: 1em;
+	font-size: 1.1em;
 }
 
 .st-menu ul li a {
@@ -108,9 +109,8 @@ body
 	padding: 1em 1em 1em 1.2em;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
+	color: #EBC562;
 	text-transform: uppercase;
-	text-shadow: 0 0 1px rgba(255,255,255,0.1);
 	letter-spacing: 1px;
 	font-weight: 400;
 	font-size: 0.8em;
@@ -128,18 +128,15 @@ body
 	color: #ffffff;
 }
 
-/* Individual effects */
-
-/* Effect 4: Slide along */
 .st-effect-4.st-menu-open .st-pusher {
 	-webkit-transform: translate3d(200px, 0, 0);
-	transform: translate3d(300px, 0, 0);
+	transform: translate3d(200px, 0, 0);
 }
 
 .st-effect-4.st-menu {
 	z-index: 1;
-	-webkit-transform: translate3d(-50%, 0, 0);
-	transform: translate3d(-50%, 0, 0);
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
 }
 
 .st-effect-4.st-menu-open .st-effect-4.st-menu {
