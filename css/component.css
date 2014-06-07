@@ -35,6 +35,12 @@ body
 	transition: transform 0.5s;
 }
 
+#main{
+	overflow: auto;
+	height: 101%;
+	width: 101%;
+}
+
 .st-pusher::after {
 	position: relative;
 	top: 0;
@@ -59,10 +65,10 @@ body
 	top: 0;
 	left: 0;
 	z-index: 100;
-	visibility: hidden;
+	visibility: auto;
 	width: 200px;
 	height: 100%;
-	overflow: scroll;
+	overflow: hidden;
 	background: #333333;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
@@ -75,6 +81,7 @@ body
 	width: 100%;
 	background: rgba(0,0,0,0.2);
 	content: '';
+	overflow: auto;
 	opacity: 1;
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
@@ -84,6 +91,7 @@ body
 	width: 0;
 	height: 0;
 	opacity: 1;
+	overflow: auto;
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
