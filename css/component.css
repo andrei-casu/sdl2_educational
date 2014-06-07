@@ -3,6 +3,7 @@ body,
 .st-container,
 .st-content {
 	height: 100%;
+	overflow-x: hidden;
 	font-family: Calibri;
 }
 
@@ -12,8 +13,7 @@ body
 	color: #ffffff;
 }
 
-.st-content {
-}
+
 
 .st-content,
 .st-content-inner {
@@ -36,9 +36,9 @@ body
 }
 
 #main{
+	height: 100%;
+	width: 100%;
 	overflow: auto;
-	height: 101%;
-	width: 101%;
 }
 
 .st-pusher::after {
@@ -60,15 +60,19 @@ body
 	transition: opacity 0.5s;
 }
 
+#main::-webkit-scrollbar {
+    display: none;
+}
+
 .st-menu {
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
 	visibility: auto;
+	overflow: hidden;
 	width: 200px;
 	height: 100%;
-	overflow: hidden;
 	background: #333333;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
@@ -91,7 +95,6 @@ body
 	width: 0;
 	height: 0;
 	opacity: 1;
-	overflow: auto;
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
