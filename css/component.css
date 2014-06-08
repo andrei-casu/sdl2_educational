@@ -4,7 +4,7 @@ body,
 .st-content {
 	height: 100%;
 	overflow-x: hidden;
-	font-family: Calibri;
+	font-family: Verdana;
 }
 
 body
@@ -35,12 +35,6 @@ body
 	transition: transform 0.5s;
 }
 
-#main{
-	height: 100%;
-	width: 100%;
-	overflow: auto;
-}
-
 .st-pusher::after {
 	position: relative;
 	top: 0;
@@ -60,7 +54,7 @@ body
 	transition: opacity 0.5s;
 }
 
-#main::-webkit-scrollbar {
+.st-menu::-webkit-scrollbar {
     display: none;
 }
 
@@ -70,7 +64,7 @@ body
 	left: 0;
 	z-index: 100;
 	visibility: auto;
-	overflow: hidden;
+	overflow: scroll;
 	width: 200px;
 	height: 100%;
 	background: #333333;

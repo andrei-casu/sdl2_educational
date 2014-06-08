@@ -16,10 +16,10 @@
 			these menus will be on top of the push wrapper
 		-->
 		<nav class="st-menu st-effect-4" id="menu-4">
-			<div id="main"><ul>
-				<li><a class="b_meniu" id="b1" href="#">Hello SDL2</a></li>
+			<ul>
+				<li><a class="b_meniu" id="b1" href="#s1">Hello SDL2</a></li>
 				<h2>Rendering</h2>
-				<li><a class="b_meniu" id="b2" href="#">images</a></li>
+				<li><a class="b_meniu" id="b2" href="#s2">images</a></li>
 				<li><a class="b_meniu" id="b3" href="#">fonts</a></li>
 				<li><a class="b_meniu" id="b4" href="#">geometry</a></li>
 
@@ -42,7 +42,7 @@
 				<li><a class="b_meniu" id="b15" href="#">capping fps</a></li>
 				<li><a class="b_meniu" id="b16" href="#">independent movement</a></li>
 
-			</ul></div>
+			</ul>
 		</nav>
 
 			<!-- content push wrapper -->
@@ -71,6 +71,189 @@
 							<div>
 								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
 							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s2_b_maincpp">main.cpp</div>
+							<div class="buton_cod" id="s2_b_claseh">clase.h</div></div></p><br>
+							<div class="butoane">
+								<div id="s2_c_maincpp" class="code_active cod">
+								<pre style="background:#fdf6e3;color:#586e75"><span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//  main.cpp</span>
+<span style="color:#93a1a1">//  </span>
+<span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//  Created by Casuneanu Andrei on 03/06/14.</span>
+<span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//</span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+
+
+<span style="color:#a57800">void</span> <span style="color:#536871">calc_arie</span>()
+{
+    //suma de triunghiuri
+    double perim;
+    Lista p1, p2;
+    double arie_triunghi;
+    for (p1=L->urm; p1!=L &amp;&amp; p2!=L; p1=p1->urm)
+    {
+        //calculez aria triunghiului format pe prim, p1 si p2
+        p2=p1->urm;
+        perim=<span style="color:#536871">distanta</span> (L, p1)+<span style="color:#536871">distanta</span> (L, p2) + distanta (p1, p2);
+        <span class="de_explicat">arie_triunghi=perim/2;<span class="explicatie">Aria triunghiului este perimetrul supra 2 </span></span>
+        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (L, p1);
+        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (L, p2);
+        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (p1, p2);
+        <span class="de_explicat">arie_triunghi=perim/2;<span class="explicatie">Aria triunghiului este perimetrul supra 2 </span></span>
+        arie+=<span style="color:#536871">sqrt</span>(arie_triunghi);
+        p1=p2->urm;
+    }
+    //ultimul triunghi
+    if (n%2)//e e impar
+    {
+        perim=<span style="color:#536871">distanta</span> (L, p1)+<span style="color:#536871">distanta</span> (L, p2) + distanta (p1, p2);
+        arie_triunghi=perim/2;
+        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (L, p1);
+        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (L, p2);
+        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (p1, p2);
+        arie+=<span style="color:#536871">sqrt</span>(arie_triunghi);
+    }
+    else//ultimele 3 noduri
+    {
+        return;
+    }
+    return;
+}
+
+</pre></div>
+<div id="s2_c_claseh" class="cod">
+	<pre style="background:#fdf6e3;color:#586e75"><span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//  clase.h</span>
+<span style="color:#93a1a1">//  buckets_sort</span>
+<span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//  Created by Casuneanu Andrei on 27/05/14.</span>
+<span style="color:#93a1a1">//  Copyright (c) 2014 Casuneanu Andrei. All rights reserved.</span>
+<span style="color:#93a1a1">//</span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>fstream<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">DMAX</span> 1000</span>
+<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">IN</span> "test.in"</span>
+<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">OUT</span> "test.out"</span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ifstream <span style="color:#536871">fin</span>(IN);
+ofstream <span style="color:#536871">fout</span>(OUT);
+
+<span style="color:#073642;font-weight:700">struct</span> nod {int inf; nod* urm;};
+<span style="color:#a57800">typedef</span> <span style="color:#073642;font-weight:700">struct</span> nod* lista;
+
+<span style="color:#a57800">int</span> n, m;
+lista g[<span style="color:#269186">10</span>];
+lista ultim[<span style="color:#269186">10</span>];
+<span style="color:#a57800">int</span> v[DMAX];
+
+<span style="color:#a57800">void</span> <span style="color:#536871">citire</span>();
+<span style="color:#a57800">void</span> <span style="color:#536871">showtime</span>();
+<span style="color:#a57800">void</span> <span style="color:#536871">inserare</span>(lista&amp;, lista, int);
+<span style="color:#a57800">void</span> <span style="color:#536871">parcurgere</span>(lista);
+
+</pre>
+</div>
+							</div>
+						</div>
+
+
+						<div class="article" id="s3">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s3_b_maincpp">main.cpp</div>
+							<div class="buton_cod" id="s3_b_claseh">clase.h</div></div></p><br>
+							<div class="butoane">
+								<div id="s3_c_maincpp" class="code_active cod">
+								<pre style="background:#fdf6e3;color:#586e75"><span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//  main.cpp</span>
+<span style="color:#93a1a1">//  </span>
+<span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//  Created by Casuneanu Andrei on 03/06/14.</span>
+<span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//</span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+
+
+<span style="color:#a57800">void</span> <span style="color:#536871">calc_arie</span>()
+{
+    //suma de triunghiuri
+    double perim;
+    Lista p1, p2;
+    double arie_triunghi;
+    for (p1=L->urm; p1!=L &amp;&amp; p2!=L; p1=p1->urm)
+    {
+        //calculez aria triunghiului format pe prim, p1 si p2
+        p2=p1->urm;
+        perim=<span style="color:#536871">distanta</span> (L, p1)+<span style="color:#536871">distanta</span> (L, p2) + distanta (p1, p2);
+        <span class="de_explicat">arie_triunghi=perim/2;<span class="explicatie">Aria triunghiului este perimetrul supra 2 </span></span>
+        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (L, p1);
+        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (L, p2);
+        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (p1, p2);
+        <span class="de_explicat">arie_triunghi=perim/2;<span class="explicatie">Aria triunghiului este perimetrul supra 2 </span></span>
+        arie+=<span style="color:#536871">sqrt</span>(arie_triunghi);
+        p1=p2->urm;
+    }
+    //ultimul triunghi
+    if (n%2)//e e impar
+    {
+        perim=<span style="color:#536871">distanta</span> (L, p1)+<span style="color:#536871">distanta</span> (L, p2) + distanta (p1, p2);
+        arie_triunghi=perim/2;
+        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (L, p1);
+        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (L, p2);
+        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (p1, p2);
+        arie+=<span style="color:#536871">sqrt</span>(arie_triunghi);
+    }
+    else//ultimele 3 noduri
+    {
+        return;
+    }
+    return;
+}
+
+</pre></div>
+<div id="s3_c_claseh" class="cod">
+	<pre style="background:#fdf6e3;color:#586e75"><span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//  clase.h</span>
+<span style="color:#93a1a1">//  buckets_sort</span>
+<span style="color:#93a1a1">//</span>
+<span style="color:#93a1a1">//  Created by Casuneanu Andrei on 27/05/14.</span>
+<span style="color:#93a1a1">//  Copyright (c) 2014 Casuneanu Andrei. All rights reserved.</span>
+<span style="color:#93a1a1">//</span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>fstream<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">DMAX</span> 1000</span>
+<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">IN</span> "test.in"</span>
+<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">OUT</span> "test.out"</span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ifstream <span style="color:#536871">fin</span>(IN);
+ofstream <span style="color:#536871">fout</span>(OUT);
+
+<span style="color:#073642;font-weight:700">struct</span> nod {int inf; nod* urm;};
+<span style="color:#a57800">typedef</span> <span style="color:#073642;font-weight:700">struct</span> nod* lista;
+
+<span style="color:#a57800">int</span> n, m;
+lista g[<span style="color:#269186">10</span>];
+lista ultim[<span style="color:#269186">10</span>];
+<span style="color:#a57800">int</span> v[DMAX];
+
+<span style="color:#a57800">void</span> <span style="color:#536871">citire</span>();
+<span style="color:#a57800">void</span> <span style="color:#536871">showtime</span>();
+<span style="color:#a57800">void</span> <span style="color:#536871">inserare</span>(lista&amp;, lista, int);
+<span style="color:#a57800">void</span> <span style="color:#536871">parcurgere</span>(lista);
+
+</pre>
+</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -81,6 +264,23 @@
 <script>
 $(".article").hide(0);
 $(".active").show(0);
+//$(".explicatie").hide(0);
+//buton cod
+//s2_b_maincpp
+//cod in sine
+//s2_c_maincpp
+//code_active
+$(".cod").hide(0);
+
+$(".buton_cod").click(function(){
+	var nume=$(this).attr("id");
+	nume=nume.replace("b", "c");
+	$(".code_active").hide(0);
+	$(".code_active").removeClass("code_active");
+	$("#"+nume).addClass("code_active");
+	$(".code_active").show(0);
+})
+
 </script>
 </body>
 </html>
