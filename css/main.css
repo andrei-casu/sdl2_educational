@@ -1,5 +1,6 @@
 a{
 	text-decoration: none;
+	color: #ffffff;
 }
 
 .article{
@@ -105,6 +106,10 @@ a{
 
 .de_explicat:hover .explicatie{
     display:block;
+}
+
+.text{
+	font-family: Calibri;
 }
 
 .textuletz{
