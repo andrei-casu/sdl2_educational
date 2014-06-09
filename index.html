@@ -7,7 +7,10 @@
 		<title>SDL2</title>
 		<link rel="stylesheet" type="text/css" href="css/component.css"/>
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/external/mootools-core-1.4.5-minified.js"></script>
+<script type="text/javascript" src="js/dg-count-down.js"></script>
+<script type="text/javascript" src="js/dg-quiz-maker.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 <body>
 	<div id="st-container" class="st-container">
@@ -41,6 +44,7 @@
 				<li><a class="b_meniu" id="b15" href="#">calculating fps</a></li>
 				<li><a class="b_meniu" id="b16" href="#">capping fps</a></li>
 				<li><a class="b_meniu" id="b17" href="#">independent movement</a></li>
+				<li><a class="b_meniu" id="b100"><h2>Test Final</h2></a></li>
 
 			</ul>
 		</nav>
@@ -139,7 +143,9 @@
 							<div class="subtitle">Noțiuni Introductive</div>
 							<iframe width="640" height="360" src="http://www.youtube.com/embed/D7QeE0UQL8s" frameborder="0" allowfullscreen></iframe>
 							<div class="textuletz">
-								Rendering este procesul de generare a unei imagini de la un model (sau modele în ceea ce colectiv ar putea fi numit un fișier scenă) prin intermediul unor programe de calculator.
+								Rendering este procesul de generare a unei imagini de la un model (sau modele în ceea ce colectiv ar putea fi numit un fișier scenă) prin intermediul unor programe de calculator.<br>
+
+
 							</div>
 
 							<p><div class="butoane">
@@ -338,7 +344,7 @@ SDL_Window* window;
 
 
 						<div class="article" id="s3">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Rendering text</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -523,7 +529,7 @@ SDL_Window* window;
 						</div>
 
 						<div class="article" id="s4">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Rendering geometry</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -676,7 +682,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s6">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Key presses</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -896,7 +902,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s7">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Ket states</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -1106,7 +1112,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s8">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Mouse Events</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -1297,7 +1303,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s9">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Window events</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  <p>
@@ -1339,7 +1345,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s10">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Rotation and flipping</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -1550,7 +1556,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s11">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Colision</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -1593,7 +1599,7 @@ bool intersectie(int, int, int, int, int, int);
 
 
 <div class="article" id="s12">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Levels</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  <p>Tilling = modul în care putem face diferite nivele dintr-un joc cu ajutorul anumitor "piese"<br>
@@ -1637,7 +1643,7 @@ Salvarea timpului <br>
 
 
 <div class="article" id="s13">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Timer</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -1965,13 +1971,13 @@ SDL_Window* window;
 
 
 <div class="article" id="s14">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Timer Callbacks</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
-								  
+								  Pagină în lucru
 							</div>
 
-							<p><div class="butoane"><div class="buton_cod" id="s14_b_maincpp">main.cpp</div>
+							<p><div class="butoane">
 							
 						</div></p><br>
 							<div class="butoane">
@@ -1984,7 +1990,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s15">
-							<div class="title">Hello SDL2</div>
+							<div class="title">FPS</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -2299,7 +2305,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s16">
-							<div class="title">Hello SDL2</div>
+							<div class="title">FPS</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -2626,7 +2632,7 @@ SDL_Window* window;
 
 
 <div class="article" id="s17">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Frame independent movement</div>
 							<div class="subtitle">Noțiuni Introductive</div>
 							<div class="textuletz">
 								  
@@ -3006,6 +3012,136 @@ SDL_Renderer* ren;
 							</div>
 						</div>
 
+<div class="article" id="s100">
+							<div class="title">Test final</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+							<div id="questions"></div>
+<div id="error"></div>
+<div id="result"></div>
+<div style="margin-top:5px">This demo illustrates the free Javascript quiz maker script from DHTMLGoodies.com</div>
+<script type="text/javascript">
+
+function showWrongAnswer(){
+    document.id('error').set('html', 'Wrong answer, Please try again');
+}
+
+function showScore() {
+	var score = quizMaker.getScore();
+
+	var el = new Element('h3');
+	el.set('html', 'Mulţumim!');
+    document.id('result').adopt(el);
+
+	el = new Element('h4');
+	el.set('html', 'Scor: ' + score.numCorrectAnswers + ' din ' + score.numQuestions);
+    document.id('result').adopt(el);
+
+	if(score.incorrectAnswers.length > 0) {
+		el = new Element('h4');
+		el.set('html', 'Incorrect answers:');
+        document.id('result').adopt(el);
+
+		for(var i=0;i<score.incorrectAnswers.length;i++) {
+			var incorrectAnswer = score.incorrectAnswers[i];
+			el = new Element('div');
+			el.set('html', '<b>' +  incorrectAnswer.questionNumber + ': ' + incorrectAnswer.label + '</b>');
+			document.id('result').adopt(el);
+
+			el = new Element('div');
+			el.set('html', 'Correct answer : ' + incorrectAnswer.correctAnswer);
+            document.id('result').adopt(el);
+			el = new Element('div');
+			el.set('html', 'Your answer : ' + incorrectAnswer.userAnswer);
+            document.id('result').adopt(el);
+
+		}
+	}
+
+}
+
+var questions = [
+	{
+		label : 'Textele în SDL au propriul tip de date numit intuitiv:',
+		options : ['SDL_Texture', 'Texture_SDL', 'Texture'],
+		answer : ['SDL_Texture'],
+		forceAnswer : true
+    },
+	{
+		label : 'Biblioteca SDL:',
+		options : ['îţi pune la dispoziţie câteva forme geometrice de bază prestabilite', 'te ajută să contruieşti de la zero formele geometrice pe care doreşti să le utilizezi'],
+		answer : ['îţi pune la dispoziţie câteva forme geometrice de bază prestabilite']
+    },
+    {
+		label : '1.	Pentru a folosi evnimentele, ele trebuie declarate astfel:',
+		options : ['a)	JoyButtonEvent, MouseButtonEvent, KeyboardEvent etc', 'b)	JoyButtonEvent, MouseMotionEvent, KeyboardEvent etc', 'c)	SDL_JoyButtonEvent, SDL_MouseMotionEvent, SDL_KeyboardEvent etc'],
+		answer : ['c)	SDL_JoyButtonEvent, SDL_MouseMotionEvent, SDL_KeyboardEvent etc'],
+		forceAnswer : true
+    },
+	{
+		label : '2.	Evenimentele sunt importante deoarece:',
+		options : ['a)	fără ele nu ar exista interacţiune între jucător şi device', 'b)	te ajută să îţi mişti caracterul','c)	nu sunt importante, un joc poate fi implementat fără ele'],
+		answer : ['a)	fără ele nu ar exista interacţiune între jucător şi device'],
+		forceAnswer : true
+    },
+
+    {
+		label : '1.	Motion reprezintă:',
+		options : ['a)	o funcţie ca oricare alta;', 'b)	un ajutor pentru a-ţi mişca caracterele', 'c)	cea mai importantă parte a unui joc'],
+		answer : ['c)	cea mai importantă parte a unui joc'],
+		forceAnswer : true
+    },
+	{
+		label : '2.	Motion poate fi împărţită în:',
+		options : ['a)	2 capitole (rotation and flipping, levels)', 'b)	3 capitole (rotation and flippling, collision, levels)','c)	2 capitole (rotation and flipping, collision).'],
+		answer : ['b)	3 capitole (rotation and flippling, collision, levels)'],
+		forceAnswer : true
+    },
+{
+		label : '1.	Majoritatea monitoarelor suportă:',
+		options : ['a)	peste 60 FPS', 'b)	60 FPS', 'c)	cel mult 60 FPS'],
+		answer : ['c)	cel mult 60 FPS'],
+		forceAnswer : true
+    },
+	{
+		label : '2.	Ştiind numărul total de FPS-uri, putem afla numărul de FPS într-o secundă prin:',
+		options : ['a)	regula de 3 simplă', 'b)	într-o secundă pot fi executate acelaşi număr de FPS-uri'],
+		answer : ['a)	regula de 3 simplă'],
+		forceAnswer : true
+    },
+
+
+]
+
+function showAnswerAlert() {
+	document.id('error').set('html', 'You have to answer before you continue to the next question');
+}
+function clearErrorBox() {
+    document.id('error').set('html','');
+}
+var quizMaker = new DG.QuizMaker({
+	questions : questions,
+	el : 'questions',
+    forceCorrectAnswer:false,
+	listeners : {
+		'finish' : showScore,
+		'missinganswer' : showAnswerAlert,
+		'sendanswer' : clearErrorBox,
+        'wrongAnswer' : showWrongAnswer
+	}
+});
+quizMaker.start();
+
+
+
+</script>
+
+							</div>
+
+							<div class="butoane">
+</div>
+							</div>
+						</div>
 
 
 
