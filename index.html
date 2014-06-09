@@ -24,23 +24,23 @@
 				<li><a class="b_meniu" id="b4" href="#">geometry</a></li>
 
 				<h2>Events</h2>
-				<li><a class="b_meniu" id="b4" href="#">event driven programming</a></li>
-				<li><a class="b_meniu" id="b5" href="#">key presses</a></li>
-				<li><a class="b_meniu" id="b6" href="#">mouse events</a></li>
-				<li><a class="b_meniu" id="b7" href="#">get states</a></li>
-				<li><a class="b_meniu" id="b8" href="#">window events</a></li>
+				<li><a class="b_meniu" id="b5" href="#">event driven programming</a></li>
+				<li><a class="b_meniu" id="b6" href="#">key presses</a></li>
+				<li><a class="b_meniu" id="b7" href="#">key states</a></li>
+				<li><a class="b_meniu" id="b8" href="#">mouse events</a></li>
+				<li><a class="b_meniu" id="b9" href="#">window events</a></li>
 
 				<h2>Motion</h2>
-				<li><a class="b_meniu" id="b9" href="#">rotation and flipping</a></li>
-				<li><a class="b_meniu" id="b10" href="#">collision</a></li>
-				<li><a class="b_meniu" id="b11" href="#">levels</a></li>
+				<li><a class="b_meniu" id="b10" href="#">rotation and flipping</a></li>
+				<li><a class="b_meniu" id="b11" href="#">collision</a></li>
+				<li><a class="b_meniu" id="b12" href="#">levels</a></li>
 
 				<h2>FPS</h2>
-				<li><a class="b_meniu" id="b12" href="#">timer</a></li>
-				<li><a class="b_meniu" id="b13" href="#">timer cllbacks</a></li>
-				<li><a class="b_meniu" id="b14" href="#">calculating fps</a></li>
-				<li><a class="b_meniu" id="b15" href="#">capping fps</a></li>
-				<li><a class="b_meniu" id="b16" href="#">independent movement</a></li>
+				<li><a class="b_meniu" id="b13" href="#">timer</a></li>
+				<li><a class="b_meniu" id="b14" href="#">timer callbacks</a></li>
+				<li><a class="b_meniu" id="b15" href="#">calculating fps</a></li>
+				<li><a class="b_meniu" id="b16" href="#">capping fps</a></li>
+				<li><a class="b_meniu" id="b17" href="#">independent movement</a></li>
 
 			</ul>
 		</nav>
@@ -66,96 +66,186 @@
 						</div>
 
 						<div class="article" id="s2">
-							<div class="title">Hello SDL2</div>
+							<div class="title">Rendering an image</div>
 							<div class="subtitle">Noțiuni Introductive</div>
-							<div>
-								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							<div class="textuletz">
+								Procesul de rendering este foarte complex.
+
 							</div>
 
 							<p><div class="butoane"><div class="buton_cod" id="s2_b_maincpp">main.cpp</div>
-							<div class="buton_cod" id="s2_b_claseh">clase.h</div></div></p><br>
+							<div class="buton_cod" id="s2_b_imagineh">imagine.h</div>
+							<div class="buton_cod" id="s2_b_imaginecpp">imagine.cpp</div>
+							<div class="buton_cod" id="s2_b_initializareh">initializare.h</div>
+							<div class="buton_cod" id="s2_b_initializarecpp">initializare.cpp</div>
+						</div></p><br>
 							<div class="butoane">
-								<div id="s2_c_maincpp" class="code_active cod">
-								<pre style="background:#fdf6e3;color:#586e75"><span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//  main.cpp</span>
-<span style="color:#93a1a1">//  </span>
-<span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//  Created by Casuneanu Andrei on 03/06/14.</span>
-<span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//</span>
+								
+<div id="s2_c_maincpp" class="code_active cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>stdio.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
 
-<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>imagine.h<span style="color:#269186">"</span></span></span>
 
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
 
-<span style="color:#a57800">void</span> <span style="color:#536871">calc_arie</span>()
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
 {
-    //suma de triunghiuri
-    double perim;
-    Lista p1, p2;
-    double arie_triunghi;
-    for (p1=L->urm; p1!=L &amp;&amp; p2!=L; p1=p1->urm)
+    <span class="de_explicat">SDL_Event e;<span class="explicatie">Eventul pe care îl folosim pentru a detecta activitățile utilizatorului</span></span>
+
+    init();
+    while (1)
     {
-        //calculez aria triunghiului format pe prim, p1 si p2
-        p2=p1->urm;
-        perim=<span style="color:#536871">distanta</span> (L, p1)+<span style="color:#536871">distanta</span> (L, p2) + distanta (p1, p2);
-        <span class="de_explicat">arie_triunghi=perim/2;<span class="explicatie">Aria triunghiului este perimetrul supra 2 </span></span>
-        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (L, p1);
-        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (L, p2);
-        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (p1, p2);
-        <span class="de_explicat">arie_triunghi=perim/2;<span class="explicatie">Aria triunghiului este perimetrul supra 2 </span></span>
-        arie+=<span style="color:#536871">sqrt</span>(arie_triunghi);
-        p1=p2->urm;
+        <span class="de_explicat">while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)<span class="explicatie">Preia activitatea utilizatorului</span></span>
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                <span class="de_explicat">close();<span class="explicatie">Daca tipul este QUIT(utilizatorul a apasat X) iese din aplicație</span></span>
+        }
+        <span class="de_explicat">SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);<span class="explicatie">Setez culoarea cu care se deseneaza, în cazul ăsta fiind culoarea alba</span></span>
+        <span class="de_explicat">SDL_RenderClear(renderer);<span class="explicatie">Elibereaza toate texturile din renderer</span></span>
+        <span class="de_explicat">imagine.<span style="color:#536871">render</span>(0, 0);<span class="explicatie">Pune imaginea în renderer la poziția 0 0</span></span>
+        <span class="de_explicat">SDL_RenderPresent(renderer);<span class="explicatie">Rendererul pune pe ecran ce a primit</span></span>
     }
-    //ultimul triunghi
-    if (n%2)//e e impar
-    {
-        perim=<span style="color:#536871">distanta</span> (L, p1)+<span style="color:#536871">distanta</span> (L, p2) + distanta (p1, p2);
-        arie_triunghi=perim/2;
-        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (L, p1);
-        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (L, p2);
-        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (p1, p2);
-        arie+=<span style="color:#536871">sqrt</span>(arie_triunghi);
-    }
-    else//ultimele 3 noduri
-    {
-        return;
-    }
+    return 0;
+}
+
+</pre>
+								</div>
+
+
+<div id="s2_c_imagineh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_IMAGINE</span>
+#define C_IMAGINE
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;string>
+#include "initializare.h"
+using namespace std;
+
+<span class="de_explicat">class texture<span class="explicatie">Clasa pe care o folosim ca să încarcăm o imagine și mai târziu sa o punem pe ecran</span></span>
+{
+    public:
+        texture();
+        ~texture();
+        <span class="de_explicat">void load_from_file (string);<span class="explicatie">Funcția care primește calea catre poză și o citește</span></span>
+
+        void free();
+        <span class="de_explicat">void render (int, int);<span class="explicatie">Funcția care primește x și y și care pune poza pe ecran</span></span>
+
+        <span class="de_explicat">int get_w() {return w;};<span class="explicatie">Functie inline care returnează lățimea(width)</span></span>
+        <span class="de_explicat">int get_h() {return h;};<span class="explicatie">Functie inline care returnează înățimea(height)</span></span>
+
+    private:
+        <span class="de_explicat">SDL_Texture* m_texture;<span class="explicatie">Textura care conține imaginea</span></span>
+        <span class="de_explicat">int w, h;<span class="explicatie">Înălțimea si lățimea</span></span>
+};
+
+extern texture imagine;
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+</pre>
+</div>
+
+
+
+<div id="s2_c_imaginecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+texture imagine;
+
+<span style="color:#536871">texture::texture</span>() {m_texture = NULL; w=0; h=0;}
+<span style="color:#268bd2">texture::~texture</span>() {<span style="color:#536871">free</span>();}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::free</span>()
+{
+    SDL_DestroyTexture (m_texture);
+    m_texture = NULL; w = 0; h = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::load_from_file</span>(string path)
+{
+    free();
+    SDL_Texture* new_texture = NULL;
+    SDL_Surface* loaded_surface = IMG_Load( path.<span style="color:#536871">c_str</span>() );
+
+    new_texture = SDL_CreateTextureFromSurface (renderer, loaded_surface);
+    w = loaded_surface->w;
+    h = loaded_surface->h;
+    SDL_FreeSurface (loaded_surface);
+
+    m_texture = new_texture;
     return;
 }
 
-</pre></div>
-<div id="s2_c_claseh" class="cod">
-	<pre style="background:#fdf6e3;color:#586e75"><span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//  clase.h</span>
-<span style="color:#93a1a1">//  buckets_sort</span>
-<span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//  Created by Casuneanu Andrei on 27/05/14.</span>
-<span style="color:#93a1a1">//  Copyright (c) 2014 Casuneanu Andrei. All rights reserved.</span>
-<span style="color:#93a1a1">//</span>
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::render</span> (int x, int y)
+{
+    SDL_Rect render_q = {x, y, w, h};
+    SDL_RenderCopy(renderer, m_texture, NULL, &amp;render_q);
+}
+</pre>
+</div>
 
-<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>fstream<span style="color:#269186">></span></span></span>
-<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">DMAX</span> 1000</span>
-<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">IN</span> "test.in"</span>
-<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">OUT</span> "test.out"</span>
-<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+<div id="s2_c_initializareh" class="cod">
 
-ifstream <span style="color:#536871">fin</span>(IN);
-ofstream <span style="color:#536871">fout</span>(OUT);
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_INITIALIZARE</span>
+#define C_INITIALIZARE
 
-<span style="color:#073642;font-weight:700">struct</span> nod {int inf; nod* urm;};
-<span style="color:#a57800">typedef</span> <span style="color:#073642;font-weight:700">struct</span> nod* lista;
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+#include "imagine.h"
 
-<span style="color:#a57800">int</span> n, m;
-lista g[<span style="color:#269186">10</span>];
-lista ultim[<span style="color:#269186">10</span>];
-<span style="color:#a57800">int</span> v[DMAX];
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
 
-<span style="color:#a57800">void</span> <span style="color:#536871">citire</span>();
-<span style="color:#a57800">void</span> <span style="color:#536871">showtime</span>();
-<span style="color:#a57800">void</span> <span style="color:#536871">inserare</span>(lista&amp;, lista, int);
-<span style="color:#a57800">void</span> <span style="color:#536871">parcurgere</span>(lista);
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
 
 </pre>
+
+</div>
+
+
+
+<div id="s2_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>imagine.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    window=<span style="color:#536871">SDL_CreateWindow</span>("Image", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF );
+
+    imagine.<span style="color:#536871">load_from_file</span>( "imagine<span style="color:#268bd2">.png</span>" );
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    imagine.<span style="color:#536871">free</span>();
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    exit(EXIT_SUCCESS);
+}
+</pre>
+	
 </div>
 							</div>
 						</div>
@@ -169,92 +259,2048 @@ lista ultim[<span style="color:#269186">10</span>];
 							</div>
 
 							<p><div class="butoane"><div class="buton_cod" id="s3_b_maincpp">main.cpp</div>
-							<div class="buton_cod" id="s3_b_claseh">clase.h</div></div></p><br>
+							<div class="buton_cod" id="s3_b_texth">text.h</div>
+							<div class="buton_cod" id="s3_b_textcpp">text.cpp</div>
+							<div class="buton_cod" id="s3_b_initializareh">initializare.h</div>
+							<div class="buton_cod" id="s3_b_initializarecpp">initializare.cpp</div>
+						</div></p><br>
 							<div class="butoane">
-								<div id="s3_c_maincpp" class="code_active cod">
-								<pre style="background:#fdf6e3;color:#586e75"><span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//  main.cpp</span>
-<span style="color:#93a1a1">//  </span>
-<span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//  Created by Casuneanu Andrei on 03/06/14.</span>
-<span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//</span>
+								
+<div id="s3_c_maincpp" class="cod">
 
-<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
 
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
 
-<span style="color:#a57800">void</span> <span style="color:#536871">calc_arie</span>()
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
 {
-    //suma de triunghiuri
-    double perim;
-    Lista p1, p2;
-    double arie_triunghi;
-    for (p1=L->urm; p1!=L &amp;&amp; p2!=L; p1=p1->urm)
+    SDL_Event e;
+    init();
+
+    while (1)
     {
-        //calculez aria triunghiului format pe prim, p1 si p2
-        p2=p1->urm;
-        perim=<span style="color:#536871">distanta</span> (L, p1)+<span style="color:#536871">distanta</span> (L, p2) + distanta (p1, p2);
-        <span class="de_explicat">arie_triunghi=perim/2;<span class="explicatie">Aria triunghiului este perimetrul supra 2 </span></span>
-        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (L, p1);
-        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (L, p2);
-        arie_triunghi*=perim-<span style="color:#536871">distanta</span> (p1, p2);
-        <span class="de_explicat">arie_triunghi=perim/2;<span class="explicatie">Aria triunghiului este perimetrul supra 2 </span></span>
-        arie+=<span style="color:#536871">sqrt</span>(arie_triunghi);
-        p1=p2->urm;
+        while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                close();
+        }
+
+        SDL_SetRenderDrawColor(renderer, 0x00, 0X00, 0X00, 0XFF);
+        SDL_RenderClear(renderer);
+        <span class="de_explicat">text.<span style="color:#536871">render</span>(0, 0);<span class="explicatie">Funcția prin care se pune textul pe ecran</span></span>
+        SDL_RenderPresent(renderer);
     }
-    //ultimul triunghi
-    if (n%2)//e e impar
-    {
-        perim=<span style="color:#536871">distanta</span> (L, p1)+<span style="color:#536871">distanta</span> (L, p2) + distanta (p1, p2);
-        arie_triunghi=perim/2;
-        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (L, p1);
-        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (L, p2);
-        arie_triunghi*=perim/2-<span style="color:#536871">distanta</span> (p1, p2);
-        arie+=<span style="color:#536871">sqrt</span>(arie_triunghi);
-    }
-    else//ultimele 3 noduri
-    {
-        return;
-    }
+    return 0;
+}
+</pre>
+
+
+</div>
+<div id="s3_c_texth" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_TEXT</span>
+#define C_TEXT
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;SDL_ttf.h>
+#include &lt;string>
+#include "initializare.h"
+using namespace std;
+
+class texture
+{
+    public:
+        texture();
+        ~texture();
+        <span class="de_explicat">void load_from_text(string);<span class="explicatie">Funcția care creeaza o textură dintr-un șir de caractere</span></span>
+
+        void free();
+        void render(int, int);
+
+        int get_w() {return w;};
+        int get_h() {return h;};
+
+    private:
+        SDL_Surface* m_surface;
+        SDL_Texture* m_texture;
+        int w, h;
+};
+
+extern texture text;
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+</pre>
+</div>
+
+<div id="s3_c_textcpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+texture text;
+
+<span style="color:#536871">texture::texture</span>() {m_texture = NULL; w=0; h=0;}
+<span style="color:#268bd2">texture::~texture</span>() {<span style="color:#536871">free</span>();}
+
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::free</span>()
+{
+    SDL_DestroyTexture (m_texture);
+    m_texture = NULL; w = 0; h = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::load_from_text</span>(string path)
+{
+    free();
+    <span class="de_explicat">SDL_Color color; color = { 255, 255, 255 };<span class="explicatie"></span></span>
+    TTF_Font* font; font = TTF_OpenFont( "font<span style="color:#268bd2">.ttf</span>", 60 );
+
+    m_surface = TTF_RenderText_Solid(font, path.<span style="color:#536871">c_str</span>(), color);
+    <span class="de_explicat">m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);<span class="explicatie">Crearea texturii din suprafața deja creată</span></span>
+
+    w = m_surface->w;
+    h = m_surface->h;
     return;
 }
 
-</pre></div>
-<div id="s3_c_claseh" class="cod">
-	<pre style="background:#fdf6e3;color:#586e75"><span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//  clase.h</span>
-<span style="color:#93a1a1">//  buckets_sort</span>
-<span style="color:#93a1a1">//</span>
-<span style="color:#93a1a1">//  Created by Casuneanu Andrei on 27/05/14.</span>
-<span style="color:#93a1a1">//  Copyright (c) 2014 Casuneanu Andrei. All rights reserved.</span>
-<span style="color:#93a1a1">//</span>
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::render</span>(int x, int y)
+{
+    SDL_Rect renderer_q = {x, y, w, h};
+    <span class="de_explicat">SDL_RenderCopy(renderer, m_texture, NULL, &amp;renderer_q);<span class="explicatie">Copierea texturii in renderer in poziția x, y.
+    	În renderer_q se află poziția exactă</span></span>
+}
+</pre>
+</div>
 
-<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>fstream<span style="color:#269186">></span></span></span>
-<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">DMAX</span> 1000</span>
-<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">IN</span> "test.in"</span>
-<span style="color:#bb3700">#<span style="color:#bb3700">define</span> <span style="color:#bb3700">OUT</span> "test.out"</span>
+
+<div id="s3_c_initializareh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_INITIALIZARE</span>
+#define C_INITIALIZARE
+
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+#include "text.h"
+
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
+
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+</pre>
+</div>
+
+<div id="s3_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
+    window=<span style="color:#536871">SDL_CreateWindow</span>("text", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF );
+
+    text.<span style="color:#536871">load_from_text</span>("hello. smile, be happy.");
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    text.<span style="color:#536871">free</span>();
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    TTF_Quit();
+    exit(EXIT_SUCCESS);
+}
+</pre>
+</div>
+							</div>
+						</div>
+
+						<div class="article" id="s4">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s4_b_maincpp">main.cpp</div>
+							<div class="buton_cod" id="s4_b_initializareh">initializare.h</div>
+							<div class="buton_cod" id="s4_b_initializarecpp">initializare.cpp</div>
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s4_c_maincpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
 <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
 
-ifstream <span style="color:#536871">fin</span>(IN);
-ofstream <span style="color:#536871">fout</span>(OUT);
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
+{
+    SDL_Event e;
+    init();
 
-<span style="color:#073642;font-weight:700">struct</span> nod {int inf; nod* urm;};
-<span style="color:#a57800">typedef</span> <span style="color:#073642;font-weight:700">struct</span> nod* lista;
+    while (1)
+    {
+        while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                close();
+        }
 
-<span style="color:#a57800">int</span> n, m;
-lista g[<span style="color:#269186">10</span>];
-lista ultim[<span style="color:#269186">10</span>];
-<span style="color:#a57800">int</span> v[DMAX];
+        SDL_SetRenderDrawColor(renderer, 0xFF, 0XFF, 0XFF, 0XFF);
+        SDL_RenderClear(renderer);
 
-<span style="color:#a57800">void</span> <span style="color:#536871">citire</span>();
-<span style="color:#a57800">void</span> <span style="color:#536871">showtime</span>();
-<span style="color:#a57800">void</span> <span style="color:#536871">inserare</span>(lista&amp;, lista, int);
-<span style="color:#a57800">void</span> <span style="color:#536871">parcurgere</span>(lista);
+        SDL_Rect patrat = { W/4, H/4, W/2, H/2 };
+        SDL_SetRenderDrawColor( renderer, 0xB2, 0x66, 0xFF, 0xFF );
+        SDL_RenderFillRect( renderer, &amp;patrat );
+
+        SDL_Rect contur = { W/6, H/6, W*2/3, H*2/3 };
+        SDL_SetRenderDrawColor( renderer, 0x66, 0x00, 0xCC, 0xFF );
+        SDL_RenderDrawRect( renderer, &amp;contur );
+
+        SDL_SetRenderDrawColor( renderer, 0x00, 0x00, 0xFF, 0xFF );
+        SDL_RenderDrawLine( renderer, H/3, 0, H/3, W);
+
+        SDL_SetRenderDrawColor( renderer, 0x66, 0x66, 0xFF, 0xFF );
+        for (int i = 0; i &lt; H; i += 10 )
+            {
+                SDL_RenderDrawPoint( renderer, H, i );
+            }
+
+        SDL_RenderPresent(renderer);
+    }
+    return 0;
+}
+</pre>
+</div>
+
+<div id="s4_c_initializareh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_INITIALIZARE</span>
+#define C_INITIALIZARE
+
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
+
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s4_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    window=<span style="color:#536871">SDL_CreateWindow</span>("text", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF );
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    exit(EXIT_SUCCESS);
+}
 
 </pre>
 </div>
 							</div>
 						</div>
+
+
+
+<div class="article" id="s5">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s5_b_maincpp">main.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s5_c_maincpp" class="cod">
+
+</div>
+							</div>
+						</div>
+
+
+
+<div class="article" id="s6">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s6_b_maincpp">main.cpp</div>
+								<div class="buton_cod" id="s6_b_texth">text.h</div>
+								<div class="buton_cod" id="s6_b_textcpp">text.cpp</div>
+								<div class="buton_cod" id="s6_b_initializareh">initializare.h</div>
+								<div class="buton_cod" id="s6_b_initializarecpp">initializare.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s6_c_maincpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
+{
+    SDL_Event e;
+    init();
+
+    texture now;
+
+    while (1)
+    {
+        while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                close();
+        }
+
+        SDL_SetRenderDrawColor(renderer, 0x00, 0X00, 0X00, 0XFF);
+        SDL_RenderClear(renderer);
+
+        now=directie[0];
+        if (e<span style="color:#268bd2">.type</span> == SDL_KEYDOWN)
+        {
+            switch (e<span style="color:#268bd2">.key</span><span style="color:#268bd2">.keysym</span><span style="color:#268bd2">.sym</span>)
+            {
+                case SDLK_UP:
+                    now=directie[1];
+                    break;
+                case SDLK_RIGHT:
+                    now=directie[2];
+                    break;
+                case SDLK_DOWN:
+                    now=directie[3];
+                    break;
+                case SDLK_LEFT:
+                    now=directie[4];
+                    break;
+                default:
+                    now=directie[0];
+                    break;
+            }
+        }
+
+        now.<span style="color:#536871">render</span>((W-now.<span style="color:#536871">get_w</span>())/2, (H-now.<span style="color:#536871">get_h</span>())/2);
+        SDL_RenderPresent(renderer);
+    }
+    return 0;
+}
+
+</pre>
+</div>
+
+<div id="s6_c_texth" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_TEXT</span>
+#define C_TEXT
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;SDL_ttf.h>
+#include &lt;string>
+#include "initializare.h"
+using namespace std;
+
+class texture
+{
+    public:
+        texture();
+        ~texture();
+        void load_from_text(string);
+
+        void free();
+        void render(int, int);
+
+        int get_w() {return w;};
+        int get_h() {return h;};
+
+    private:
+        SDL_Surface* m_surface;
+        SDL_Texture* m_texture;
+        int w, h;
+};
+
+extern texture directie[5];
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s6_c_textcpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+texture directie[<span style="color:#269186">5</span>];
+
+<span style="color:#536871">texture::texture</span>() {m_texture = NULL; w=0; h=0;}
+<span style="color:#268bd2">texture::~texture</span>() {<span style="color:#536871">free</span>();}
+
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::free</span>()
+{
+    SDL_DestroyTexture (m_texture);
+    m_texture = NULL; w = 0; h = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::load_from_text</span>(string path)
+{
+    free();
+    SDL_Color color; color = { 255, 255, 255 };
+    TTF_Font* font; font = TTF_OpenFont( "font<span style="color:#268bd2">.ttf</span>", 72 );
+
+    m_surface = TTF_RenderText_Solid(font, path.<span style="color:#536871">c_str</span>(), color);
+    m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);
+
+    w = m_surface->w;
+    h = m_surface->h;
+    return;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::render</span>(int x, int y)
+{
+    SDL_Rect renderer_q = {x, y, w, h};
+    SDL_RenderCopy(renderer, m_texture, NULL, &amp;renderer_q);
+}
+
+</pre>
+</div>
+
+<div id="s6_c_initializareh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_INITIALIZARE</span>
+#define C_INITIALIZARE
+
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+#include "text.h"
+
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
+
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s6_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
+    window=<span style="color:#536871">SDL_CreateWindow</span>("text", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF );
+
+    directie[0].<span style="color:#536871">load_from_text</span>("apasa pe sageti");
+    directie[1].<span style="color:#536871">load_from_text</span>("SUS");
+    directie[2].<span style="color:#536871">load_from_text</span>("DREAPTA");
+    directie[3].<span style="color:#536871">load_from_text</span>("JOS");
+    directie[4].<span style="color:#536871">load_from_text</span>("STANGA");
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    int i;
+    for (i=0; i&lt;5; i++) directie[i].<span style="color:#536871">free</span>();
+
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    TTF_Quit();
+    exit(EXIT_SUCCESS);
+}
+
+</pre>
+</div>
+							</div>
+						</div>
+
+
+<div class="article" id="s7">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s7_b_maincpp">main.cpp</div>
+								<div class="buton_cod" id="s7_b_texth">text.h</div>
+								<div class="buton_cod" id="s7_b_textcpp">text.cpp</div>
+								<div class="buton_cod" id="s7_b_initializareh">initializare.h</div>
+								<div class="buton_cod" id="s7_b_initializarecpp">initializare.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s7_c_maincpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
+{
+    SDL_Event e;
+    init();
+
+    texture now;
+
+    while (1)
+    {
+        while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                close();
+        }
+
+        SDL_SetRenderDrawColor(renderer, 0x00, 0X00, 0X00, 0XFF);
+        SDL_RenderClear(renderer);
+
+        const Uint8* key_states = SDL_GetKeyboardState(NULL);
+        if (key_states[SDL_SCANCODE_UP]) now = directie[1];
+            else
+        if (key_states[SDL_SCANCODE_RIGHT]) now = directie[2];
+            else
+        if (key_states[SDL_SCANCODE_DOWN]) now = directie[3];
+            else
+        if (key_states[SDL_SCANCODE_LEFT]) now = directie[4];
+            else
+            now = directie[0];
+
+        now.<span style="color:#536871">render</span>((W-now.<span style="color:#536871">get_w</span>())/2, (H-now.<span style="color:#536871">get_h</span>())/2);
+        SDL_RenderPresent(renderer);
+    }
+    return 0;
+}
+
+</pre>
+</div>
+
+<div id="s7_c_texth" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_TEXT</span>
+#define C_TEXT
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;SDL_ttf.h>
+#include &lt;string>
+#include "initializare.h"
+using namespace std;
+
+class texture
+{
+    public:
+        texture();
+        ~texture();
+        void load_from_text(string);
+
+        void free();
+        void render(int, int);
+
+        int get_w() {return w;};
+        int get_h() {return h;};
+
+    private:
+        SDL_Surface* m_surface;
+        SDL_Texture* m_texture;
+        int w, h;
+};
+
+extern texture directie[5];
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s7_c_textcpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+texture directie[<span style="color:#269186">5</span>];
+
+<span style="color:#536871">texture::texture</span>() {m_texture = NULL; w=0; h=0;}
+<span style="color:#268bd2">texture::~texture</span>() {<span style="color:#536871">free</span>();}
+
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::free</span>()
+{
+    SDL_DestroyTexture (m_texture);
+    m_texture = NULL; w = 0; h = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::load_from_text</span>(string path)
+{
+    free();
+    SDL_Color color; color = { 255, 255, 255 };
+    TTF_Font* font; font = TTF_OpenFont( "font<span style="color:#268bd2">.ttf</span>", 72 );
+
+    m_surface = TTF_RenderText_Solid(font, path.<span style="color:#536871">c_str</span>(), color);
+    m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);
+
+    w = m_surface->w;
+    h = m_surface->h;
+    return;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::render</span>(int x, int y)
+{
+    SDL_Rect renderer_q = {x, y, w, h};
+    SDL_RenderCopy(renderer, m_texture, NULL, &amp;renderer_q);
+}
+
+</pre>
+</div>
+
+<div id="s7_c_initializareh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_INITIALIZARE</span>
+#define C_INITIALIZARE
+
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+#include "text.h"
+
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
+
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s7_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
+    window=<span style="color:#536871">SDL_CreateWindow</span>("text", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF );
+
+    directie[0].<span style="color:#536871">load_from_text</span>("apasa pe sageti");
+    directie[1].<span style="color:#536871">load_from_text</span>("SUS");
+    directie[2].<span style="color:#536871">load_from_text</span>("DREAPTA");
+    directie[3].<span style="color:#536871">load_from_text</span>("JOS");
+    directie[4].<span style="color:#536871">load_from_text</span>("STANGA");
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    int i;
+    for (i=0; i&lt;5; i++) directie[i].<span style="color:#536871">free</span>();
+
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    TTF_Quit();
+    exit(EXIT_SUCCESS);
+}
+
+</pre>
+</div>
+							</div>
+						</div>
+
+
+
+
+<div class="article" id="s8">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s8_b_maincpp">main.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s8_c_maincpp" class="cod">
+
+</div>
+							</div>
+						</div>
+
+
+
+<div class="article" id="s9">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s9_b_maincpp">main.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s9_c_maincpp" class="cod">
+
+</div>
+							</div>
+						</div>
+
+
+
+
+<div class="article" id="s10">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s10_b_maincpp">main.cpp</div>
+								<div class="buton_cod" id="s10_b_imagineh">imagine.h</div>
+								<div class="buton_cod" id="s10_b_imaginecpp">imagine.cpp</div>
+								<div class="buton_cod" id="s10_b_initializareh">initializare.h</div>
+								<div class="buton_cod" id="s10_b_initializarecpp">initializare.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s10_c_maincpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>stdio.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>imagine.h<span style="color:#269186">"</span></span></span>
+
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
+{
+    SDL_Event e;
+    init();
+
+    double grade = 0;
+    SDL_RendererFlip flip = SDL_FLIP_NONE;
+
+    while (1)
+    {
+        while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                close();
+        }
+
+        SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
+        SDL_RenderClear(renderer);
+
+        if (e<span style="color:#268bd2">.type</span> == SDL_KEYDOWN)
+        {
+            switch (e<span style="color:#268bd2">.key</span><span style="color:#268bd2">.keysym</span><span style="color:#268bd2">.sym</span>)
+            {
+                case SDLK_LEFT:
+                    grade-=1;
+                    break;
+
+                case SDLK_RIGHT:
+                    grade+=1;
+                    break;
+
+                case SDLK_UP:
+                    flip = SDL_FLIP_HORIZONTAL;
+                    break;
+
+                case SDLK_DOWN:
+                    flip = SDL_FLIP_VERTICAL;
+                    break;
+            }
+        }
+
+        sageata.<span style="color:#536871">render</span>((W-sageata.<span style="color:#536871">get_w</span>())/2, (H-sageata.<span style="color:#536871">get_h</span>())/2, grade, flip);
+        SDL_RenderPresent(renderer);
+    }
+    return 0;
+}
+
+</pre>
+</div>
+
+<div id="s10_c_imagineh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_IMAGINE</span>
+#define C_IMAGINE
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;string>
+#include "initializare.h"
+using namespace std;
+
+class texture
+{
+    public:
+        texture();
+        ~texture();
+        void load_from_file (string);
+
+        void free();
+        void render(int, int, double, SDL_RendererFlip);
+
+        int get_w() {return w;};
+        int get_h() {return h;};
+
+    private:
+        SDL_Texture* m_texture;
+        int w, h;
+};
+
+extern texture sageata;
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s10_c_imaginecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+texture sageata;
+
+<span style="color:#536871">texture::texture</span>() {m_texture = NULL; w=0; h=0;}
+<span style="color:#268bd2">texture::~texture</span>() {<span style="color:#536871">free</span>();}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::free</span>()
+{
+    SDL_DestroyTexture (m_texture);
+    m_texture = NULL; w = 0; h = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::load_from_file</span>(string path)
+{
+    free();
+    SDL_Texture* new_texture = NULL;
+    SDL_Surface* loaded_surface = IMG_Load( path.<span style="color:#536871">c_str</span>() );
+
+    new_texture = SDL_CreateTextureFromSurface (renderer, loaded_surface);
+    w = loaded_surface->w;
+    h = loaded_surface->h;
+    SDL_FreeSurface (loaded_surface);
+
+    m_texture = new_texture;
+    return;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::render</span> (int x, int y, double angle, SDL_RendererFlip flip)
+{
+    SDL_Rect renderer_q = {x, y, w, h};
+    SDL_RenderCopyEx(renderer, m_texture, NULL, &amp;renderer_q, angle, NULL, flip );
+}
+
+</pre>
+</div>
+
+<div id="s10_c_initializareh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_INITIALIZARE</span>
+#define C_INITIALIZARE
+
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+#include "imagine.h"
+
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
+
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s10_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>imagine.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    window=<span style="color:#536871">SDL_CreateWindow</span>("rotation and flipping", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF );
+
+    sageata.<span style="color:#536871">load_from_file</span>( "imagine<span style="color:#268bd2">.png</span>" );
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    sageata.<span style="color:#536871">free</span>();
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    exit(EXIT_SUCCESS);
+}
+
+</pre>
+</div>
+							</div>
+						</div>
+
+
+
+
+
+<div class="article" id="s11">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s11_b_maincpp">main.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s11_c_maincpp" class="cod">
+
+</div>
+							</div>
+						</div>
+
+
+
+<div class="article" id="s12">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s12_b_maincpp">main.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s12_c_maincpp" class="cod">
+
+</div>
+							</div>
+						</div>
+
+
+
+<div class="article" id="s13">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s13_b_maincpp">main.cpp</div>
+								<div class="buton_cod" id="s13_b_timerh">timer.h</div>
+								<div class="buton_cod" id="s13_b_timercpp">timer.cpp</div>
+								<div class="buton_cod" id="s13_b_texth">text.h</div>
+								<div class="buton_cod" id="s13_b_textcpp">text.cpp</div>
+								<div class="buton_cod" id="s13_b_initializareh">initializare.h</div>
+								<div class="buton_cod" id="s13_b_initializarecpp">initializare.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s13_c_maincpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>sstream<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>stdio.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>timer.h<span style="color:#269186">"</span></span></span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
+{
+    SDL_Event e;
+    init();
+
+    timer ceas;
+    stringstream timp;
+
+    while (1)
+    {
+        while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                close();
+        }
+
+        SDL_SetRenderDrawColor(renderer, 0x00, 0X00, 0X00, 0XFF);
+        SDL_RenderClear(renderer);
+
+        if (e<span style="color:#268bd2">.type</span> == SDL_KEYDOWN)
+        {
+            if (e<span style="color:#268bd2">.key</span><span style="color:#268bd2">.keysym</span><span style="color:#268bd2">.sym</span> == SDLK_UP)
+            {
+                if (ceas.<span style="color:#536871">is_started</span>()) ceas.<span style="color:#536871">stop</span>();
+                    else ceas.<span style="color:#536871">start</span>();
+            }
+
+            if (e<span style="color:#268bd2">.key</span><span style="color:#268bd2">.keysym</span><span style="color:#268bd2">.sym</span> == SDLK_DOWN)
+            {
+                if (ceas.<span style="color:#536871">is_paused</span>()) ceas.<span style="color:#536871">unpause</span>();
+                    else ceas.<span style="color:#536871">pause</span>();
+            }
+        }
+
+        timp.<span style="color:#536871">str</span>("");
+        timp&lt;&lt; "seconds since start "&lt;&lt; (ceas.<span style="color:#536871">get_ticks</span>()/1000<span style="color:#268bd2">.f</span>);
+        time_text.<span style="color:#536871">load_from_text</span>(timp.<span style="color:#536871">str</span>().<span style="color:#536871">c_str</span>());
+
+        start_text.<span style="color:#536871">render</span>(10, 100);
+        pause_text.<span style="color:#536871">render</span>(10, 200);
+        time_text.<span style="color:#536871">render</span>(10, 300);
+        SDL_RenderPresent(renderer);
+    }
+    return 0;
+}
+
+</pre>
+</div>
+
+
+<div id="s13_c_timerh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> TIMER_H</span>
+#define TIMER_H
+
+class timer
+{
+    public:
+        timer();
+        void start();
+        void stop();
+        void pause();
+        void unpause();
+
+        int get_ticks();
+
+        bool is_started();
+        bool is_paused();
+
+    private:
+        int start_ticks, paused_ticks;
+        bool started, paused;
+};
+
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s13_c_timercpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>timer.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#536871">timer::timer</span>()
+{
+    started = false;
+    paused = false;
+
+    start_ticks = 0;
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::start</span>()
+{
+    started = true;
+    paused = false;
+
+    start_ticks = SDL_GetTicks();
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::stop</span>()
+{
+    started = false;
+    paused = false;
+
+    start_ticks = 0;
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::pause</span>()
+{
+    if (started &amp;&amp; !paused)
+    {
+        paused = true;
+        paused_ticks = SDL_GetTicks() - start_ticks;
+        start_ticks = 0;
+    }
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::unpause</span>()
+{
+    if (started &amp;&amp; paused)
+    {
+        paused = false;
+        start_ticks = SDL_GetTicks() - paused_ticks;
+        paused_ticks = 0;
+    }
+}
+
+<span style="color:#a57800">int</span> <span style="color:#536871">timer::get_ticks</span>()
+{
+    int time=0;
+    if (started)
+        if (paused) time = paused_ticks;
+            else time = SDL_GetTicks() - start_ticks;
+    return time;
+}
+
+<span style="color:#a57800">bool</span> <span style="color:#536871">timer::is_started</span>()
+{
+    return started;
+}
+
+<span style="color:#a57800">bool</span> <span style="color:#536871">timer::is_paused</span>()
+{
+    return paused &amp;&amp; started;
+}
+
+</pre>
+</div>
+
+
+
+<div id="s13_c_texth" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_TEXT</span>
+#define C_TEXT
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;SDL_ttf.h>
+#include &lt;string>
+#include "initializare.h"
+using namespace std;
+
+class texture
+{
+    public:
+        texture();
+        ~texture();
+        void load_from_text(string);
+
+        void free();
+        void render(int, int);
+
+        int get_w() {return w;};
+        int get_h() {return h;};
+
+    private:
+        SDL_Surface* m_surface;
+        SDL_Texture* m_texture;
+        int w, h;
+};
+
+extern texture time_text, pause_text, start_text;
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s13_c_textcpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+texture time_text, pause_text, start_text;
+
+<span style="color:#536871">texture::texture</span>() {m_texture = NULL; w=0; h=0;}
+<span style="color:#268bd2">texture::~texture</span>() {<span style="color:#536871">free</span>();}
+
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::free</span>()
+{
+    SDL_DestroyTexture (m_texture);
+    m_texture = NULL; w = 0; h = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::load_from_text</span>(string path)
+{
+    free();
+    SDL_Color color; color = { 255, 255, 255 };
+    TTF_Font* font; font = TTF_OpenFont( "font<span style="color:#268bd2">.ttf</span>", 36 );
+
+    m_surface = TTF_RenderText_Solid(font, path.<span style="color:#536871">c_str</span>(), color);
+    m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);
+
+    w = m_surface->w;
+    h = m_surface->h;
+    return;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::render</span>(int x, int y)
+{
+    SDL_Rect renderer_q = {x, y, w, h};
+    SDL_RenderCopy(renderer, m_texture, NULL, &amp;renderer_q);
+}
+
+</pre>
+</div>
+
+
+<div id="s13_c_initializareh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_INITIALIZARE</span>
+#define C_INITIALIZARE
+
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+#include "text.h"
+
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
+
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s13_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
+    window=<span style="color:#536871">SDL_CreateWindow</span>("text", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF );
+
+    start_text.<span style="color:#536871">load_from_text</span>("apasa sageata de sus pentru START/STOP");
+    pause_text.<span style="color:#536871">load_from_text</span>("apasa sageata de jos pentru PAUSE/UNPAUSE");
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    time_text.<span style="color:#536871">free</span>();
+    pause_text.<span style="color:#536871">free</span>();
+    start_text.<span style="color:#536871">free</span>();
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    TTF_Quit();
+    exit(EXIT_SUCCESS);
+}
+
+</pre>
+</div>
+							</div>
+						</div>
+
+
+
+<div class="article" id="s14">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s14_b_maincpp">main.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s14_c_maincpp" class="cod">
+
+</div>
+							</div>
+						</div>
+
+
+<div class="article" id="s15">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s15_b_maincpp">main.cpp</div>
+								<div class="buton_cod" id="s15_b_timerh">timer.h</div>
+								<div class="buton_cod" id="s15_b_timercpp">timer.cpp</div>
+								<div class="buton_cod" id="s15_b_texth">text.h</div>
+								<div class="buton_cod" id="s15_b_textcpp">text.cpp</div>
+								<div class="buton_cod" id="s15_b_initializareh">initializare.h</div>
+								<div class="buton_cod" id="s15_b_initializarecpp">initializare.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s15_c_maincpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>sstream<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>stdio.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>timer.h<span style="color:#269186">"</span></span></span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
+{
+    SDL_Event e;
+    init();
+
+    timer ceas;
+    stringstream timp;
+
+    int nr_frames = 0;
+    ceas.<span style="color:#536871">start</span>();
+
+    while (1)
+    {
+        while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                close();
+        }
+
+        SDL_SetRenderDrawColor(renderer, 0x00, 0X00, 0X00, 0XFF);
+        SDL_RenderClear(renderer);
+
+        double medie_frames = nr_frames / (ceas.<span style="color:#536871">get_ticks</span>() / 1000<span style="color:#268bd2">.f</span>);
+        if (medie_frames > 2000000)
+            medie_frames = 0;
+
+        timp.<span style="color:#536871">str</span>("");
+        timp&lt;&lt; "media de frameuri pe secunda este de "&lt;&lt; medie_frames;
+        time_text.<span style="color:#536871">load_from_text</span>(timp.<span style="color:#536871">str</span>().<span style="color:#536871">c_str</span>());
+
+        time_text.<span style="color:#536871">render</span>((W-600)/2, (H - time_text.<span style="color:#536871">get_h</span>())/2);
+        SDL_RenderPresent(renderer);
+
+        ++nr_frames;
+    }
+    return 0;
+}
+
+</pre>
+</div>
+
+
+<div id="s15_c_timerh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> TIMER_H</span>
+#define TIMER_H
+
+class timer
+{
+    public:
+        timer();
+        void start();
+        void stop();
+        void pause();
+        void unpause();
+
+        int get_ticks();
+
+        bool is_started();
+        bool is_paused();
+
+    private:
+        int start_ticks, paused_ticks;
+        bool started, paused;
+};
+
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s15_c_timercpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>timer.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#536871">timer::timer</span>()
+{
+    started = false;
+    paused = false;
+
+    start_ticks = 0;
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::start</span>()
+{
+    started = true;
+    paused = false;
+
+    start_ticks = SDL_GetTicks();
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::stop</span>()
+{
+    started = false;
+    paused = false;
+
+    start_ticks = 0;
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::pause</span>()
+{
+    if (started &amp;&amp; !paused)
+    {
+        paused = true;
+        paused_ticks = SDL_GetTicks() - start_ticks;
+        start_ticks = 0;
+    }
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::unpause</span>()
+{
+    if (started &amp;&amp; paused)
+    {
+        paused = false;
+        start_ticks = SDL_GetTicks() - paused_ticks;
+        paused_ticks = 0;
+    }
+}
+
+<span style="color:#a57800">int</span> <span style="color:#536871">timer::get_ticks</span>()
+{
+    int time=0;
+    if (started)
+        if (paused) time = paused_ticks;
+            else time = SDL_GetTicks() - start_ticks;
+    return time;
+}
+
+<span style="color:#a57800">bool</span> <span style="color:#536871">timer::is_started</span>()
+{
+    return started;
+}
+
+<span style="color:#a57800">bool</span> <span style="color:#536871">timer::is_paused</span>()
+{
+    return paused &amp;&amp; started;
+}
+
+</pre>
+</div>
+
+
+
+<div id="s15_c_texth" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_TEXT</span>
+#define C_TEXT
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;SDL_ttf.h>
+#include &lt;string>
+#include "initializare.h"
+using namespace std;
+
+class texture
+{
+    public:
+        texture();
+        ~texture();
+        void load_from_text(string);
+
+        void free();
+        void render(int, int);
+
+        int get_w() {return w;};
+        int get_h() {return h;};
+
+    private:
+        SDL_Surface* m_surface;
+        SDL_Texture* m_texture;
+        int w, h;
+};
+
+extern texture time_text;
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s15_c_textcpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+texture time_text;
+
+<span style="color:#536871">texture::texture</span>() {m_texture = NULL; w=0; h=0;}
+<span style="color:#268bd2">texture::~texture</span>() {<span style="color:#536871">free</span>();}
+
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::free</span>()
+{
+    SDL_DestroyTexture (m_texture);
+    m_texture = NULL; w = 0; h = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::load_from_text</span>(string path)
+{
+    free();
+    SDL_Color color; color = { 255, 255, 255 };
+    TTF_Font* font; font = TTF_OpenFont( "font<span style="color:#268bd2">.ttf</span>", 36 );
+
+    m_surface = TTF_RenderText_Solid(font, path.<span style="color:#536871">c_str</span>(), color);
+    m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);
+
+    w = m_surface->w;
+    h = m_surface->h;
+    return;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::render</span>(int x, int y)
+{
+    SDL_Rect renderer_q = {x, y, w, h};
+    SDL_RenderCopy(renderer, m_texture, NULL, &amp;renderer_q);
+}
+
+</pre>
+</div>
+
+
+<div id="s15_c_initializareh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> C_INITIALIZARE</span>
+#define C_INITIALIZARE
+
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+#include "text.h"
+
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
+
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s15_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
+    window=<span style="color:#536871">SDL_CreateWindow</span>("text", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF );
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    time_text.<span style="color:#536871">free</span>();
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    TTF_Quit();
+    exit(EXIT_SUCCESS);
+}
+
+</pre>
+</div>
+							</div>
+						</div>
+
+
+
+<div class="article" id="s16">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s16_b_maincpp">main.cpp</div>
+								<div class="buton_cod" id="s16_b_timerh">timer.h</div>
+								<div class="buton_cod" id="s16_b_timercpp">timer.cpp</div>
+								<div class="buton_cod" id="s16_b_texth">text.h</div>
+								<div class="buton_cod" id="s16_b_textcpp">text.cpp</div>
+								<div class="buton_cod" id="s16_b_initializareh">initializare.h</div>
+								<div class="buton_cod" id="s16_b_initializarecpp">initializare.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s16_c_maincpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>sstream<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>stdio.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>timer.h<span style="color:#269186">"</span></span></span>
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>(int argc, char* args[])
+{
+    SDL_Event e;
+    init();
+
+    timer ceas;
+    timer seteaza;
+    stringstream timp;
+
+    int nr_frames = 0;
+    ceas.<span style="color:#536871">start</span>();
+
+    while (1)
+    {
+        while (<span style="color:#536871">SDL_PollEvent</span>(&amp;e)!=0)
+        {
+            if (e<span style="color:#268bd2">.type</span> == SDL_QUIT)
+                close();
+        }
+
+        SDL_SetRenderDrawColor(renderer, 0x00, 0X00, 0X00, 0XFF);
+        SDL_RenderClear(renderer);
+
+        double medie_frames = nr_frames / (ceas.<span style="color:#536871">get_ticks</span>() / 1000<span style="color:#268bd2">.f</span>);
+        if (medie_frames > 2000000)
+            medie_frames = 0;
+
+        timp.<span style="color:#536871">str</span>("");
+        timp&lt;&lt; "media de <span style="color:#268bd2">frameuri</span> (setate) pe secunda este de "&lt;&lt; medie_frames;
+        time_text.<span style="color:#536871">load_from_text</span>(timp.<span style="color:#536871">str</span>().<span style="color:#536871">c_str</span>());
+
+        time_text.<span style="color:#536871">render</span>((W-730)/2, (H - time_text.<span style="color:#536871">get_h</span>())/2);
+        SDL_RenderPresent(renderer);
+
+        ++nr_frames;
+
+        int frame_ticks = seteaza.<span style="color:#536871">get_ticks</span>();
+        if (frame_ticks &lt; TICK_PER_FRAME)
+        {
+            SDL_Delay(TICK_PER_FRAME - frame_ticks);
+        }
+    }
+    return 0;
+}
+
+</pre>
+</div>
+
+
+<div id="s16_c_timerh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> TIMER_H</span>
+#define TIMER_H
+
+class timer
+{
+    public:
+        timer();
+        void start();
+        void stop();
+        void pause();
+        void unpause();
+
+        int get_ticks();
+
+        bool is_started();
+        bool is_paused();
+
+    private:
+        int start_ticks, paused_ticks;
+        bool started, paused;
+};
+
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s16_c_timercpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>timer.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+
+<span style="color:#536871">timer::timer</span>()
+{
+    started = false;
+    paused = false;
+
+    start_ticks = 0;
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::start</span>()
+{
+    started = true;
+    paused = false;
+
+    start_ticks = SDL_GetTicks();
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::stop</span>()
+{
+    started = false;
+    paused = false;
+
+    start_ticks = 0;
+    paused_ticks = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::pause</span>()
+{
+    if (started &amp;&amp; !paused)
+    {
+        paused = true;
+        paused_ticks = SDL_GetTicks() - start_ticks;
+        start_ticks = 0;
+    }
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">timer::unpause</span>()
+{
+    if (started &amp;&amp; paused)
+    {
+        paused = false;
+        start_ticks = SDL_GetTicks() - paused_ticks;
+        paused_ticks = 0;
+    }
+}
+
+<span style="color:#a57800">int</span> <span style="color:#536871">timer::get_ticks</span>()
+{
+    int time=0;
+    if (started)
+        if (paused) time = paused_ticks;
+            else time = SDL_GetTicks() - start_ticks;
+    return time;
+}
+
+<span style="color:#a57800">bool</span> <span style="color:#536871">timer::is_started</span>()
+{
+    return started;
+}
+
+<span style="color:#a57800">bool</span> <span style="color:#536871">timer::is_paused</span>()
+{
+    return paused &amp;&amp; started;
+}
+
+</pre>
+</div>
+
+
+
+<div id="s16_c_texth" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> TEXT</span>
+#define TEXT
+
+#include &lt;SDL.h>
+#include &lt;SDL_image.h>
+#include &lt;SDL_ttf.h>
+#include &lt;string>
+#include "initializare.h"
+using namespace std;
+
+class texture
+{
+    public:
+        texture();
+        ~texture();
+        void load_from_text(string);
+
+        void free();
+        void render(int, int);
+
+        int get_w() {return w;};
+        int get_h() {return h;};
+
+    private:
+        SDL_Surface* m_surface;
+        SDL_Texture* m_texture;
+        int w, h;
+};
+
+extern texture time_text;
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s16_c_textcpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_ttf.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>string<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+<span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+texture time_text;
+
+<span style="color:#536871">texture::texture</span>() {m_texture = NULL; w=0; h=0;}
+<span style="color:#268bd2">texture::~texture</span>() {<span style="color:#536871">free</span>();}
+
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::free</span>()
+{
+    SDL_DestroyTexture (m_texture);
+    m_texture = NULL; w = 0; h = 0;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::load_from_text</span>(string path)
+{
+    free();
+    SDL_Color color; color = { 255, 255, 255 };
+    TTF_Font* font; font = TTF_OpenFont( "font<span style="color:#268bd2">.ttf</span>", 36 );
+
+    m_surface = TTF_RenderText_Solid(font, path.<span style="color:#536871">c_str</span>(), color);
+    m_texture = SDL_CreateTextureFromSurface(renderer, m_surface);
+
+    w = m_surface->w;
+    h = m_surface->h;
+    return;
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">texture::render</span>(int x, int y)
+{
+    SDL_Rect renderer_q = {x, y, w, h};
+    SDL_RenderCopy(renderer, m_texture, NULL, &amp;renderer_q);
+}
+
+</pre>
+</div>
+
+
+<div id="s16_c_initializareh" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#b58900">#<span style="color:#859900">ifndef</span> INITIALIZARE</span>
+#define INITIALIZARE
+
+#include &lt;SDL.h>
+#include &lt;cstdlib>
+#include "text.h"
+
+extern SDL_Renderer* renderer;
+extern SDL_Window* window;
+extern int W, H;
+
+extern int FPS, TICK_PER_FRAME;
+
+void init();
+void close();
+<span style="color:#b58900">#<span style="color:#859900">endif</span></span>
+
+</pre>
+</div>
+
+<div id="s16_c_initializarecpp" class="cod">
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>SDL_image.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>initializare.h<span style="color:#269186">"</span></span></span>
+<span style="color:#bb3700">#<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">"</span>text.h<span style="color:#269186">"</span></span></span>
+
+SDL_Renderer* renderer;
+SDL_Window* window;
+<span style="color:#a57800">int</span> W=<span style="color:#269186">800</span>, H=<span style="color:#269186">600</span>;
+
+<span style="color:#a57800">int</span> FPS = <span style="color:#269186">60</span>;
+<span style="color:#a57800">int</span> TICK_PER_FRAME = <span style="color:#269186">1000</span> / FPS;
+
+<span style="color:#a57800">void</span> <span style="color:#536871">init</span>()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
+    window=<span style="color:#536871">SDL_CreateWindow</span>("text", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, W, H, NULL);
+
+    renderer=<span style="color:#536871">SDL_CreateRenderer</span>(window, -1, SDL_RENDERER_ACCELERATED);
+    SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF );
+}
+
+<span style="color:#a57800">void</span> <span style="color:#536871">close</span>()
+{
+    time_text.<span style="color:#536871">free</span>();
+    SDL_DestroyRenderer( renderer ); renderer = NULL;
+    SDL_DestroyWindow( window ); window = NULL;
+    IMG_Quit();
+    SDL_Quit();
+    TTF_Quit();
+    exit(EXIT_SUCCESS);
+}
+
+</pre>
+</div>
+							</div>
+						</div>
+
+
+
+<div class="article" id="s17">
+							<div class="title">Hello SDL2</div>
+							<div class="subtitle">Noțiuni Introductive</div>
+							<div>
+								ly says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. Now that 
+							</div>
+
+							<p><div class="butoane"><div class="buton_cod" id="s17_b_maincpp">main.cpp</div>
+							
+						</div></p><br>
+							<div class="butoane">
+
+<div id="s17_c_maincpp" class="cod">
+
+</div>
+							</div>
+						</div>
+
+
+
+
+
 					</div>
 				</div>
 			</div>
@@ -271,6 +2317,8 @@ $(".active").show(0);
 //s2_c_maincpp
 //code_active
 $(".cod").hide(0);
+var opt=$(window).width();
+$(".textuletz").width((opt));
 
 $(".buton_cod").click(function(){
 	var nume=$(this).attr("id");
