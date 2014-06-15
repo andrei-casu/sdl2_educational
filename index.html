@@ -34,22 +34,21 @@
 				<li><a class="b_meniu" id="b10" href="#">circle</a></li>
 				<li><a class="b_meniu" id="b11" href="#">ellipse</a></li>
 				<li><a class="b_meniu" id="b12" href="#">line</a></li>
-				<li><a class="b_meniu" id="b13" href="#">bar</a></li>
-				<li><a class="b_meniu" id="b14" href="#">rectangle</a></li>
-				<li><a class="b_meniu" id="b15" href="#">drawpoly</a></li>
-				<li><a class="b_meniu" id="b16" href="#">floodfill</a></li>
-				<li><a class="b_meniu" id="b17" href="#">getbkcolor + setbkcolor</a></li>
-				<li><a class="b_meniu" id="b18" href="#">getcolor + setcolor</a></li>
-				<li><a class="b_meniu" id="b19" href="#">outtextxy</a></li>
-				<li><a class="b_meniu" id="b20" href="#">textheight</a></li>
-				<li><a class="b_meniu" id="b21" href="#">textwidth</a></li>
-				<li><a class="b_meniu" id="b22" href="#">putimage</a></li>
-				<li><a class="b_meniu" id="b23" href="#">imagesize</a></li>
-				<li><a class="b_meniu" id="b24" href="#">getimage</a></li>
+				<li><a class="b_meniu" id="b13" href="#">rectangle</a></li>
+				<li><a class="b_meniu" id="b14" href="#">drawpoly</a></li>
+				<li><a class="b_meniu" id="b15" href="#">floodfill</a></li>
+				<li><a class="b_meniu" id="b16" href="#">getbkcolor + setbkcolor</a></li>
+				<li><a class="b_meniu" id="b17" href="#">getcolor + setcolor</a></li>
+				<li><a class="b_meniu" id="b18" href="#">outtextxy</a></li>
+				<li><a class="b_meniu" id="b19" href="#">textheight</a></li>
+				<li><a class="b_meniu" id="b20" href="#">textwidth</a></li>
+				<li><a class="b_meniu" id="b21" href="#">putimage</a></li>
+				<li><a class="b_meniu" id="b22" href="#">imagesize</a></li>
+				<li><a class="b_meniu" id="b23" href="#">getimage</a></li>
 				
 
-				<li><a class="b_meniu" id="b25"><h2>Exemple</h2></a></li>
-				<li><a class="b_meniu" id="b26"><h2>Teste</h2></a></li>
+				<li><a class="b_meniu" id="b24"><h2>Exemple</h2></a></li>
+				<li><a class="b_meniu" id="b25"><h2>Teste</h2></a></li>
 
 
 
@@ -91,8 +90,7 @@ void initgraph(int *gd, int *gm, char *pathtodriver);</p>
 
 <p> - gd = graphics driver<br>
  - gm = graphics mode<br>
- - pathtodriver = adresa folderului în care se află<br>
-fișierele BGI.</p>
+ - pathtodriver = adresa folderului în care se află fișierele BGI.</p>
 
 
 <p>
@@ -110,10 +108,10 @@ pe calculatorul/laptopul respectiv</p>
 </div>
 							<div class="cod">
 								<div class="subtitle">Codul în care se apelează</div>
-<pre style="background:#fdf6e3;color:#586e75;">
- 
- #include&lt;graphics.h>
- #include&lt;conio.h>
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+<span style="color:#859900"> using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
 
 <span style="color:#a57800"> int</span> <span style="color:#536871">main</span>()
  {
@@ -136,6 +134,329 @@ pe calculatorul/laptopul respectiv</p>
 
 </div>
 						</div>
+
+
+
+						<div id="s6" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">CLOSEGRAPH</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>
+void closegraph(int wid=ALL_WINDOWS);</p>
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>funcția are 1 parametru OPȚIONAL:</p>
+
+<p>- wid = ce anume se închide</p>
+
+<p>acesta poate avea următoarele valori:<br>
+ALL_WINDOWS - închide toate ferestrele<br>
+CURRENT_WINDOW - închide doar fereastra curentă</p>
+
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+<pre style="background:#fdf6e3;color:#586e75"><span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+<span style="color:#859900"> using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+ 
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+    int gd = DETECT, gm;
+ 
+    <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+ 
+    <span class="de_explicat">outtext("Press any key to close the graphics mode...");<span class="explicatie">afișează textul</span></span>
+ 
+    <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată o tastă</span></span>
+    closegraph();
+    return 0;
+ }
+
+
+</pre>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">closegraph();</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>- închide modul grafic<br>
+- eliberează toată memoria alocată<br>
+- aduce fereastra în stadul inițial </p>
+
+</div>
+						</div>
+
+
+
+						<div id="s7" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">GRAPHDEFAULTS</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>void graphdefaults(void);
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>funcția nu are parametrii</p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+<pre style="background:#fdf6e3;color:#586e75">
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+ <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+   int gd = DETECT, gm;
+ 
+   <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+ 
+   <span class="de_explicat">setcolor(RED);<span class="explicatie">setează culoarea</span></span>
+   <span class="de_explicat">setbkcolor(YELLOW);<span class="explicatie">setează culoarea de fundal</span></span>
+ 
+   <span class="de_explicat">circle(250, 250, 50);<span class="explicatie">desenează un cerc</span></span>
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată prima tastă</span></span>
+   graphdefaults();
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată a doua tastă</span></span>
+   <span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
+   return 0;
+ }
+
+
+</pre>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">graphdefaults();</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>
+- setează fereasta la dimensiunile ecranului<br>
+- mută poziția curentă la coordonatele 0 0 <br>
+- resetează culorile, stilurile și fonturile<br>
+
+</p>
+</div>
+						</div>
+
+
+
+
+
+						<div id="s8" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">CLEARDEVICE</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>void cleardevice();
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>funcția nu are parametrii</p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+<pre style="background:#fdf6e3;color:#586e75">
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+ <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+ 
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+   int gd = DETECT, gm;
+   <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+ 
+   <span class="de_explicat">outtext("Press any key to clear the screen.");<span class="explicatie">afișează textul</span></span>
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată prima tastă</span></span>
+   cleardevice();
+   <span class="de_explicat">outtext("Press any key to exit...");<span class="explicatie">afișează textul</span></span>
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată a doua tastă</span></span>
+   <span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
+   return 0;
+ }
+
+
+</pre>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">cleardevice();
+</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>
+- acoperă fereastra cu o culoare (culoarea curentă de fundal)<br>
+- mută poziția curentă la coordonatele 0 0
+</p>
+
+</div>
+						</div>
+
+
+
+
+
+						<div id="s9" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">ARC</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>void arc(int x, int y, int stangle, int endangle, int radius);
+
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>funcția are 5 parametrii:<br>
+<br>
+- x = coordonata x<br>
+- y = coordonata y<br>
+- stangle = la cate grade incepe<br>
+- endangle = la cate grade se termina<br>
+- radius = raza cercului din care face parte<br>
+<br>
+gradele sunt poziționate în felul urmator:<br>
+0 grade - ora 3 <br>
+90 grade - ora 12<br>
+180 grade - ora 9<br>
+270 grade - ora 6 <br>
+</p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+
+<pre style="background:#fdf6e3;color:#586e75">
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+ <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+   int gd = DETECT, gm;
+ 
+   <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+ 
+   arc(100, 100, 0, 135, 50);
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată o tastă</span></span>
+   <span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
+   return 0;
+ }
+
+
+</pre>
+
+
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">arc(100, 100, 0, 135, 50);</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>
+	- desenează arcul de cerc cu dimensiunile specificate
+</p>
+</div>
+						</div>
+
+
+
+
+
+
+
+						<div id="s10" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">CIRCLE</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>void circle(int x, int y, int radius);
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>
+funcția are 3 parametrii:<br>
+- x = coordonata x<br>
+- y = coordonata y<br>
+- radius = raza cercului<br>
+<br>
+
+</p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+<pre style="background:#fdf6e3;color:#586e75">
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+ <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+   int gd = DETECT, gm;
+ 
+   <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+ 
+   circle(100, 100, 50);
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată o tastă</span></span>
+   <span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
+   return 0;
+ }
+
+
+</pre>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">circle(100, 100, 50);</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>
+- desenează cercul cu dimensiunile specificate
+</p>
+</div>
+						</div>
+
+
+
+<div id="s11" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">CIRCLE</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p></p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;"></p>
+
+<p><div class="subtitle">Ce face?</div></p>
+
+</div>
+						</div>
+
+
+
 				</div>
 			</div>
 		</div>
