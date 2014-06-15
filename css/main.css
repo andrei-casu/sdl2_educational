@@ -6,13 +6,14 @@ a{
 .article{
 	width: 80%;
 	position: relative;
-	left: 1%;
+	left: 10%;
+	margin-top: 50px;
 	font-size: 14px;
 	font-style: normal;
 }
 
 .title{
-	font-size: 30px;
+	font-size: 32px;
 	color: #EBC562;
 }
 
@@ -113,5 +114,10 @@ a{
 }
 
 .textuletz{
-	min-width: 80%;
+}
+
+
+.cod{
+	float: left;
+	width: 45%;
 }

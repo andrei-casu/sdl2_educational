@@ -78,6 +78,7 @@
 
 
 						<div id="s5" class="article">
+							<div style="float: left; width: 45%;">
 							<div class="title">INITGRAPH</div>
 							<div class="subtitle"></div>
 							<div class="textuletz">
@@ -109,20 +110,6 @@ fisierele BGI.</p>
 
 <p>4. codul in care se apeleaza</p>
 
-<p>#include<graphics.h><br>
-#include<conio.h><br>
- <br>
-int main()<br>
-{<br>
- int gd = DETECT, gm;<br>
- <br>
- initgraph(&gd, &gm, "C:\\TC\\BGI");<br>
- <br>
- getch();<br>
- closegraph();<br>
- return 0;<br>
-}</p>
-
 <p>5. ce face?<br>
 initgraph - initializeaza modul graphics <br>
 getch - asteapta pana a fost apasata o tasta<br>
@@ -131,6 +118,26 @@ closegraph - inchide modul grafic</p>
 <p>6. rezultatul (gif/imagine) NU<br>
 </p>
 							</div>
+
+</div>
+							<div class="cod">
+								Codul rulat:
+<pre style="background:#fdf6e3;color:#586e75">#include&lt;graphics.h>
+#include&lt;conio.h>
+
+<span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+{
+  int gd = DETECT, gm;
+
+  initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");
+
+  getch();
+  closegraph();
+  return 0;
+}
+
+</pre>
+</div>
 						</div>
 				</div>
 			</div>
@@ -146,7 +153,6 @@ $(".active").show(0);
 //cod in sine
 //s2_c_maincpp
 //code_active
-$(".cod").hide(0);
 var opt=$(window).width();
 $(".textuletz").width((opt));
 
