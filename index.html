@@ -85,18 +85,18 @@
 								<p><div class="subtitle">Care este structura?</div><br>
 void initgraph(int *gd, int *gm, char *pathtodriver);</p>
 
-<p><div class="subtitle">Care sunt parametrii?</div></p>
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
 
 <p>funcția are 3 parametrii:</p>
 
-<p> ->gd = graphics driver<br>
- ->gm = graphics mode<br>
- ->pathtodriver = adresa folderului în care se află<br>
+<p> gd = graphics driver<br>
+ gm = graphics mode<br>
+ pathtodriver = adresa folderului în care se află<br>
 fișierele BGI.</p>
 
 
 <p>
-*DETECT - macro definit in "graphics.h"<br>
+DETECT - macro definit in "graphics.h"<br>
 valoarea numerică = 0(requests autodetect)</p>
 
 <p>în cazul in care gd primeste valoarea <br>
@@ -109,7 +109,7 @@ pe calculatorul/laptopul respectiv</p>
 
 </div>
 							<div class="cod">
-								<div class="subtitle">Codul în care se apelează:</div>
+								<div class="subtitle">Codul în care se apelează</div>
 <pre style="background:#fdf6e3;color:#586e75;">
  
  #include&lt;graphics.h>
@@ -127,11 +127,11 @@ pe calculatorul/laptopul respectiv</p>
  }
 
 </pre>
-<p><div class="subtitle">Cum se apeleaza?</div></p>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
 
-<p>initgraph(&gd, &gm, "C:\\TC\\BGI");</p>
+<p style="font-family:Courier New;">initgraph(&gd, &gm, "C:\\TC\\BGI");</p>
 
-<p><div class="subtitle">Ce face?</div></p>
+<p><br><div class="subtitle">Ce face?</div></p>
 <p>Inițializează modul graphics</p>
 
 </div>
