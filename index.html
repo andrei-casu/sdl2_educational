@@ -82,10 +82,10 @@
 							<div class="title">INITGRAPH</div>
 							<div class="subtitle"></div>
 							<div class="textuletz">
-								<p>1. care este structura?<br>
+								<p><div class="subtitle">Care este structura?</div><br>
 void initgraph(int *gd, int *gm, char *pathtodriver);</p>
 
-<p>2. care sunt parametrii?</p>
+<p><div class="subtitle">Care sunt parametrii?</div></p>
 
 <p>functia are 3 parametrii:</p>
 
@@ -104,37 +104,37 @@ pe calculatorul/laptopul respectiv</p>
 <p> pathtodriver = adresa folderului in care se afla<br>
 fisierele BGI.</p>
 
-<p>3. cum se apeleaza?</p>
+<p><div class="subtitle">Cum se apeleaza?</div></p>
 
 <p>initgraph(&gd, &gm, "C:\\TC\\BGI");</p>
 
-<p>4. codul in care se apeleaza</p>
-
-<p>5. ce face?<br>
+<p><div class="subtitle">Ce face?</div><br>
 initgraph - initializeaza modul graphics <br>
 getch - asteapta pana a fost apasata o tasta<br>
 closegraph - inchide modul grafic</p>
 
-<p>6. rezultatul (gif/imagine) NU<br>
+<p><div class="subtitle">Rezultatul (gif/imagine) NU</div><br>
 </p>
 							</div>
 
 </div>
 							<div class="cod">
 								Codul rulat:
-<pre style="background:#fdf6e3;color:#586e75">#include&lt;graphics.h>
-#include&lt;conio.h>
+<pre style="background:#fdf6e3;color:#586e75;">
+ 
+ #include&lt;graphics.h>
+ #include&lt;conio.h>
 
-<span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
-{
-  int gd = DETECT, gm;
+<span style="color:#a57800"> int</span> <span style="color:#536871">main</span>()
+ {
+	int gd = DETECT, gm;
 
-  initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");
+	initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");
 
-  getch();
-  closegraph();
-  return 0;
-}
+  	getch();
+  	closegraph();
+  	return 0;
+ }
 
 </pre>
 </div>

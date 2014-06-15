@@ -114,10 +114,13 @@ a{
 }
 
 .textuletz{
+	font-size: 15px;
+
 }
 
 
 .cod{
 	float: left;
 	width: 45%;
+	margin-top: 50px;
 }
