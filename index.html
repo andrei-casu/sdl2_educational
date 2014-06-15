@@ -430,7 +430,276 @@ funcția are 3 parametrii:<br>
 
 
 
-<div id="s11" class="article">
+
+
+
+
+
+						<div id="s11" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">ELLIPSE</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>void ellipse(int x, int y, int stangle, int endangle, int xradius, int yradius);
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>
+functia are 6 parametrii:<br>
+<br>
+- x = coordonata x<br>
+- y = coordonata y<br>
+- stangle = la cate grade incepe<br>
+- endangle = la cate grade se termina<br>
+- xradius = raza elipsei pe x<br>
+- yradius = raza elipsei pe y<br>
+<br>
+gradele sunt pozitionate in felul urmator:<br>
+<br>
+0 grade - ora 3 <br>
+90 grade - ora 12<br>
+180 grade - ora 9<br>
+270 grade - ora 6 etc.<br>
+<br>
+
+<br>
+
+</p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+<pre style="background:#fdf6e3;color:#586e75">
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+ <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+   int gd = DETECT, gm;
+ 
+   <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+ 
+   ellipse(100, 100, 0, 360, 50, 25);
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată o tastă</span></span>
+   <span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
+   return 0;
+ }
+
+
+</pre>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">ellipse(100, 100, 0, 360, 50, 25);</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>
+- desenează elipsa cu dimensiunile specificate
+</p>
+</div>
+						</div>
+
+
+
+
+
+
+						<div id="s12" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">LINE</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>void line(int x1, int y1, int x2, int y2);
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>
+functia are 4 parametrii:<br>
+<br>
+- x1 = coordonata x de la care incepe linia<br>
+- y1 = coordonata y de la care incepe linia<br>
+- x2 = coordonata x de la care se termina linia<br>
+- y3 = coordonata y de la care se termina linia<br>
+<br>
+</p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+<pre style="background:#fdf6e3;color:#586e75">
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+ <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+   int gd = DETECT, gm;
+ 
+   <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+ 
+   line(100, 100, 200, 200);
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată o tastă</span></span>
+   <span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
+   return 0;
+ }
+
+
+</pre>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">   line(100, 100, 200, 200);</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>
+- desenează linia în culoarea curentă<br>
+- de la coordonatele (x1, y1) la (x2, y2)<br>
+- nu modifică poziția curentă<br>
+</p>
+</div>
+						</div>
+
+
+
+
+
+
+
+
+
+						<div id="s13" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">RECTANGLE</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>void rectangle(int left, int top, int right, int bottom);
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>
+functia are 4 parametrii:<br>
+<br>
+- left = coordonata x a coltului din stanga sus<br>
+- top = coordonata y a coltului din stanga sus<br>
+- right = coordonata x a coltului din dreapta jos<br>
+- bottom = coordonata y a coltului din dreapta jos<br>
+<br>
+</p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+<pre style="background:#fdf6e3;color:#586e75">
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+ <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+   int gd = DETECT, gm;
+ 
+   <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+ 
+   rectangle(100, 100, 200, 200);
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată o tastă</span></span>
+   <span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
+   return 0;
+ }
+
+
+</pre>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">   rectangle(100, 100, 200, 200);</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>
+- desenează un dreptunghi în culoarea curentă><br>
+- de la coord. stânga sus pana la dreapta jos<br>
+</p>
+</div>
+						</div>
+
+
+
+
+
+
+
+
+						<div id="s14" class="article">
+							<div style="float: left; width: 45%;">
+							<div class="title">RECTANGLE</div>
+							<div class="subtitle"></div>
+							<div class="textuletz">
+								<p><div class="subtitle">Care este structura?</div><br>void drawpoly(int numpoints, int *polypoints);
+
+<p><br><div class="subtitle">Care sunt parametrii?</div></p>
+<p>
+funcția are 2 parametrii:<br>
+<br>
+- numpoints = n (numărul de vârfuri)<br>
+- polypoints = lista coordonatelor vârfurilor<br>
+<br>
+numpoints are valoarea numărului de vârfuri<br>
+<br>
+dacă vrem ca poligonul să fie închis primul varf<br>
+trebuie specificat de 2 ori<br>
+prin urmare lista de vârfuri trebuie să înceapă și<br>
+să se termine cu aceleași coordonate (x, y)<br>
+<br>
+<br>
+</p>
+
+							</div>
+
+</div>
+							<div class="cod">
+								<div class="subtitle">Codul în care se apelează</div>
+<pre style="background:#fdf6e3;color:#586e75">
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>graphics.h<span style="color:#269186">></span></span></span>
+<span style="color:#bb3700"> #<span style="color:#bb3700">include</span> <span style="color:#269186"><span style="color:#269186">&lt;</span>iostream<span style="color:#269186">></span></span></span>
+ <span style="color:#859900">using</span> <span style="color:#073642;font-weight:700">namespace</span> std;
+
+ <span style="color:#a57800">int</span> <span style="color:#536871">main</span>()
+ {
+   int gd = DETECT, gm;
+   int points[]={<span style="color:#d33682">320</span>, <span style="color:#d33682">150</span>, <span style="color:#d33682">420</span>, <span style="color:#d33682">300</span>, <span style="color:#d33682">250</span>,<span style="color:#d33682">300</span>, <span style="color:#d33682">320</span>, <span style="color:#d33682">150</span>};
+
+   <span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
+    
+   drawpoly(4, points);
+ 
+   <span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată o tastă</span></span>
+   <span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
+   return 0;
+ }
+
+
+</pre>
+<p><br><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p style="font-family:Courier New;">   drawpoly(4, points);</p>
+
+<p><div class="subtitle">Ce face?</div></p>
+<p>
+- desenează un poligon cu numpoints vârfuri folosind culoarea curentă<br>
+- ia punctele din lista dată 2 câte 2 pentru coordonatele vârfurilor<br>
+</p>
+</div>
+						</div>
+
+
+
+
+
+
+<div id="s15" class="article">
 							<div style="float: left; width: 45%;">
 							<div class="title">CIRCLE</div>
 							<div class="subtitle"></div>
