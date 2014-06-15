@@ -43,9 +43,6 @@ body::-webkit-scrollbar {
 	opacity: 1;
 }
 
-.st-menu::-webkit-scrollbar {
-    display: none;
-}
 
 .st-menu {
 	position: fixed;
@@ -56,7 +53,7 @@ body::-webkit-scrollbar {
 	overflow: scroll;
 	width: 200px;
 	height: 100%;
-	background: #333333;
+	background: #333333;s
 	top: 0;
 	right: 0;
 	background: rgba(0,0,0,0.2);
