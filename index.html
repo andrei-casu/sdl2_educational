@@ -20,12 +20,12 @@
 		-->
 		<nav class="st-menu-open st-menu st-effect-4" id="menu-4">
 			<ul>
-				<li><a class="b_meniu pe_el" id="b1"><h2>Hello Graphics</h2></a></li>
-				<li><a class="b_meniu" id="b2" href="#">Noțiuni Introductive</a></li>
+				<li><h2>Hello Graphics</h2></li>
+				<li><a class="b_meniu pe_el" id="b2" href="#">Noțiuni Introductive</a></li>
 				<li><a class="b_meniu" id="b3" href="#">Instalare</a></li>
 
 
-				<li><a class="b_meniu" id="b4"><h2>Funcții</h2></a></li>
+				<li><h2>Funcții</h2></li>
 				<li><a class="b_meniu" id="b5" href="#">initgraph</a></li>
 				<li><a class="b_meniu" id="b6" href="#">closegraph</a></li>
 				<li><a class="b_meniu" id="b7" href="#">graphdefaults</a></li>
@@ -43,13 +43,7 @@
 				<li><a class="b_meniu" id="b19" href="#">outtextxy</a></li>
 				<li><a class="b_meniu" id="b20" href="#">textheight</a></li>
 				<li><a class="b_meniu" id="b21" href="#">textwidth</a></li>
-				<li><a class="b_meniu" id="b22" href="#">putimage</a></li>
-				<li><a class="b_meniu" id="b23" href="#">imagesize</a></li>
-				<li><a class="b_meniu" id="b24" href="#">getimage</a></li>
-				
-
-				<li><a class="b_meniu" id="b25"><h2>Exemple</h2></a></li>
-				<li><a class="b_meniu" id="b26"><h2>Teste</h2></a></li>
+				<li><a class="b_meniu" id="b22"><h2>Teste</h2></a></li>
 
 
 
@@ -62,7 +56,7 @@
 			<div class="st-content"><!-- this is the wrapper for the content -->
 				<div class="st-content-inner">
 						
-						<div id="s1" class="article active">
+						<div id="s2" class="article active">
 							<div style="float: left; width: 45%;">
 							<div class="title">Noțiuni Introductive</div>
 							<div class="subtitle"></div>
@@ -96,15 +90,32 @@ colțul stânga jos<br><br>
 </div>
 						</div>
 
-
-						
-						<div id="s2" class="article">
-							<div class="title">Hello SDL2</div>
-							<div class="subtitle">Noțiuni Introductive</div>
+						<div id="s3" class="article active">
+							<div class="title">INSTALARE</div>
+							<div class="subtitle"></div>
 							<div class="textuletz">
-							</div>
-						</div>
+<p>Pentru a putea lucra în mod grafic în Code::Blocks avem <br>
+nevoie de biblioteca WinBGIm 6.0:<br> 
+<br>
+<a href="http://www.codecutter.net/tools/winbgim">LINK</a></p>
 
+<p><div class="subtitle">1. După descărcare, dezarhivați</div>
+</p>
+<p><div class="subtitle">2. Copiați conținutul directoarelor "include" și "lib" <br>
+în folderele cu același nume din "C:/MINGW"
+</div>
+</p>
+
+<p><div class="subtitle">3. În proiectul din codeblocks mergeți în <br>
+Project->Build options->Linker settings, <br>
+apoi în câmpul Other linker options introduceți textul <br>
+<br>
+lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32</div>
+</p>
+
+</div>
+						</div>
+						
 
 						<div id="s5" class="article">
 							<div style="float: left; width: 45%;">
