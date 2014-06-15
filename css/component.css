@@ -4,6 +4,7 @@ body,
 .st-content {
 	height: 100%;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	font-family: Calibri;
 }
 
@@ -26,6 +27,8 @@ body::-webkit-scrollbar {
 
 .st-container {
 	position: absolute;
+	overflow: scroll;
+	overflow-x: hidden;
 	left: 0px;
 	top: 0;
 	z-index: 1;
