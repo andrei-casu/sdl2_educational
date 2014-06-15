@@ -87,34 +87,23 @@ void initgraph(int *gd, int *gm, char *pathtodriver);</p>
 
 <p><div class="subtitle">Care sunt parametrii?</div></p>
 
-<p>functia are 3 parametrii:</p>
+<p>funcția are 3 parametrii:</p>
 
 <p> gd = graphics driver<br>
  gm = graphics mode</p>
 
 <p>
 *DETECT - macro definit in "graphics.h"<br>
-valoarea numerica = 0(requests autodetect)</p>
+valoarea numerică = 0(requests autodetect)</p>
 
-<p>in cazul in care gd primeste valoarea <br>
-DETECT gm este setat cu ajutorul functiei <br>
-la cea mai inalta rezolutie disponibila <br>
+<p>în cazul in care gd primeste valoarea <br>
+DETECT gm este setat cu ajutorul funcției <br>
+la cea mai înaltă rezoluție disponibilă <br>
 pe calculatorul/laptopul respectiv</p>
 
-<p> pathtodriver = adresa folderului in care se afla<br>
-fisierele BGI.</p>
+<p> pathtodriver = adresa folderului în care se află<br>
+fișierele BGI.</p>
 
-<p><div class="subtitle">Cum se apeleaza?</div></p>
-
-<p>initgraph(&gd, &gm, "C:\\TC\\BGI");</p>
-
-<p><div class="subtitle">Ce face?</div><br>
-initgraph - initializeaza modul graphics <br>
-getch - asteapta pana a fost apasata o tasta<br>
-closegraph - inchide modul grafic</p>
-
-<p><div class="subtitle">Rezultatul (gif/imagine) NU</div><br>
-</p>
 							</div>
 
 </div>
@@ -129,14 +118,18 @@ closegraph - inchide modul grafic</p>
  {
 	int gd = DETECT, gm;
 
-	initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");
+	<span class="de_explicat">initgraph(&amp;gd, &amp;gm, "C:\\TC\\BGI");<span class="explicatie">inițializează modul graphics</span></span>
 
-  	getch();
-  	closegraph();
+  	<span class="de_explicat">getch();<span class="explicatie">așteaptă până a fost apăsată o tastă</span></span>
+  	<span class="de_explicat">closegraph();<span class="explicatie">închide modul grafic</span></span>
   	return 0;
  }
 
 </pre>
+<p><div class="subtitle">Cum se apeleaza?</div></p>
+
+<p>initgraph(&gd, &gm, "C:\\TC\\BGI");</p>
+
 </div>
 						</div>
 				</div>
